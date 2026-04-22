@@ -1,16 +1,131 @@
 <!DOCTYPE html>
 <html lang="en" data-lang="en">
-<head>
+<head>   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sandra's Craft Garden</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-  <style>/* all CSS here */</style>
+  <style>
+    
+    :root {
+  --bg:         #F7F4EA;
+  --surface:    #DED9E2;
+  --accent-1:   #C0B9DD;
+  --accent-2:   #80A1D4;
+  --accent-3:   #75C9C8;
+  --text:       #2D2A35;
+  --text-muted: #6B6575;
+  --radius:     1rem;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+}
+    /* Large text for farsighted users */
+body {
+  font-size: 1.15rem; /* bumped from 1.05 */
+  line-height: 1.75;  /* more breathing room between lines */
+}
+
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.3rem; }
+
+p, li {
+  font-size: 1.1rem;
+  max-width: 60ch; /* keeps line length comfortable */
+}
+
+/* Bigger tap targets — critical for 60+ users on phones */
+.tab-btn {
+  min-height: 56px;
+  min-width: 56px;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.25rem;
+}
+
+/* Language toggle button — easy to tap */
+#langToggle {
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  min-height: 48px;
+}
+
+/* Cards — generous padding so content feels open */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Tags under herb/recipe titles */
+.tag {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+/* Step lists in recipes — numbered, spaced out */
+ol.steps li {
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Ingredient lists */
+ul.ingredients li {
+  font-size: 1.1rem;
+  padding: 0.3rem 0;
+}
+
+/* Section headers */
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--accent-2);
+  margin: 1.5rem 0 1rem;
+}
+  </style>
 </head>
 <body>
-  <header><!-- app title + language toggle --></header>
-  <nav><!-- 5 tab buttons --></nav>
+  <header>
+    <header style="background: var(--accent-2); color: white; padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;">
+  <h1 style="font-size: 1.4rem;">🌿 Sandra's Craft Garden</h1>
+  <button id="langToggle" onclick="toggleLang()"
+    style="background: var(--accent-3); border: none; color: white; padding: 0.4rem 1rem; border-radius: 2rem; font-size: 0.9rem; cursor: pointer;">
+    🌐 Español
+  </button>
+</header>
+  </header>
+</header>
+  <nav>
+    <nav style="position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface); display: flex; justify-content: space-around; padding: 0.6rem 0; border-top: 1px solid var(--accent-1); z-index: 100; max-width: 680px; margin: 0 auto;">
+  <button onclick="showTab('herbs')"   class="tab-btn">🌿<br><span class="tab-label" data-en="Herbs"   data-es="Hierbas">Herbs</span></button>
+  <button onclick="showTab('recipes')" class="tab-btn">🕯️<br><span class="tab-label" data-en="Recipes" data-es="Recetas">Recipes</span></button>
+  <button onclick="showTab('oils')"    class="tab-btn">🫙<br><span class="tab-label" data-en="Oils"    data-es="Aceites">Oils</span></button>
+  <button onclick="showTab('grow')"    class="tab-btn">🌱<br><span class="tab-label" data-en="Grow"    data-es="Cultivo">Grow</span></button>
+  <button onclick="showTab('translate')" class="tab-btn">📖<br><span class="tab-label" data-en="Glossary" data-es="Glosario">Glossary</span></button>
+</nav>
+  </nav>
   <main>
     <section id="herbs">...</section>
     <section id="recipes">...</section>
@@ -18,6 +133,47 @@
     <section id="grow">...</section>
     <section id="translate">...</section>
   </main>
-  <script>/* all JS here */</script>
+  <script>
+    function showTab(id) {
+  document.querySelectorAll('main section').forEach(s => s.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+  document.querySelectorAll('.tab-btn').forEach(b => b.style.fontWeight = 'normal');
+  event.currentTarget.style.fontWeight = 'bold';
+}
+
+// Show herbs tab by default
+document.addEventListener('DOMContentLoaded', () => {
+  showTab('herbs');
+});
+
+    let currentLang = 'en';
+
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'es' : 'en';
+  document.documentElement.setAttribute('data-lang', currentLang);
+  document.getElementById('langToggle').textContent =
+    currentLang === 'en' ? '🌐 Español' : '🌐 English';
+
+  // Swap all labeled elements
+  document.querySelectorAll('[data-en]').forEach(el => {
+    el.textContent = el.getAttribute('data-' + currentLang);
+  });
+}
+
+  </script>
+  
+  <div class="card">
+  <h3>
+    <span data-en="Lavender" data-es="Lavanda">Lavender</span>
+  </h3>
+  <p class="tag" data-en="Candles • Soap • Scrubs" data-es="Velas • Jabón • Exfoliantes">
+    Candles • Soap • Scrubs
+  </p>
+  <p data-en="A calming herb with a sweet floral scent. Great for relaxing candles and moisturizing soaps."
+     data-es="Una hierba calmante con aroma floral dulce. Perfecta para velas relajantes y jabones hidratantes.">
+    A calming herb with a sweet floral scent. Great for relaxing candles and moisturizing soaps.
+  </p>
+</div>
+  
 </body>
 </html>
