@@ -132,22 +132,20 @@ ul.ingredients li {
 
 .more-btn:hover { background: var(--accent-3); }
 
-
   </style>
 </head>
 <body>
   <header>
     <header style="background: var(--accent-2); color: white; padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;">
-  <h1 style="font-size: 1.4rem;">🌿 Sandra's Craft Garden</h1>
-  <button id="langToggle" onclick="toggleLang()"
-    style="background: var(--accent-3); border: none; color: white; padding: 0.4rem 1rem; border-radius: 2rem; font-size: 0.9rem; cursor: pointer;">
+     <h1 style="font-size: 1.4rem;">🌿 Sandra's Craft Garden</h1>
+     <button id="langToggle" onclick="toggleLang()"
+     style="background: var(--accent-3); border: none; color: white; padding: 0.4rem 1rem; border-radius: 2rem; font-size: 0.9rem; cursor: pointer;">
     🌐 Español
-  </button>
-</header>
+     </button>
   </header>
-</header>
+  
   <nav>
-    <nav style="position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface); display: flex; justify-content: space-around; padding: 0.6rem 0; border-top: 1px solid var(--accent-1); z-index: 100; max-width: 680px; margin: 0 auto;">
+  <nav style="position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface); display: flex; justify-content: space-around; padding: 0.6rem 0; border-top: 1px solid var(--accent-1); z-index: 100; max-width: 680px; margin: 0 auto;">
   <button onclick="showTab('herbs')"   class="tab-btn">🌿<br><span class="tab-label" data-en="Herbs"   data-es="Hierbas">Herbs</span></button>
   <button onclick="showTab('recipes')" class="tab-btn">🕯️<br><span class="tab-label" data-en="Recipes" data-es="Recetas">Recipes</span></button>
   <button onclick="showTab('oils')"    class="tab-btn">🫙<br><span class="tab-label" data-en="Oils"    data-es="Aceites">Oils</span></button>
@@ -221,6 +219,7 @@ ul.ingredients li {
     <section id="grow">...</section>
     <section id="translate">...</section>
   </main>
+
   <script>
     function showTab(id) {
   document.querySelectorAll('main section').forEach(s => s.style.display = 'none');
@@ -315,33 +314,5 @@ document.addEventListener('click', e => {
 
 
   </script>
-  
-<div class="card" data-plant="lavender">
-  <h3>
-    <span data-en="Lavender" data-es="Lavanda">Lavender</span>
-  </h3>
-
-  <p class="tag"
-     data-en="Candles • Soap • Scrubs"
-     data-es="Velas • Jabón • Exfoliantes">
-    Candles • Soap • Scrubs
-  </p>
-
-  <p
-    data-en="A calming herb with a sweet floral scent. Great for relaxing candles and moisturizing soaps."
-    data-es="Una hierba calmante con aroma floral dulce. Perfecta para velas relajantes y jabones hidratantes.">
-    A calming herb with a sweet floral scent. Great for relaxing candles and moisturizing soaps.
-  </p>
-
-  <button class="more-btn"
-          data-en="More info"
-          data-es="Más información">
-    More info
-  </button>
-
-  <div class="details hidden"></div>
-</div>
-
-  
 </body>
 </html>
