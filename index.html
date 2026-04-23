@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- DOCTYPE html-->
 <html lang="en" data-lang="en">
 <head>   
   <meta charset="UTF-8">
@@ -162,18 +162,32 @@ function toggleLang() {
 
   </script>
   
-  <div class="card">
+<div class="card" data-plant="lavender">
   <h3>
     <span data-en="Lavender" data-es="Lavanda">Lavender</span>
   </h3>
-  <p class="tag" data-en="Candles • Soap • Scrubs" data-es="Velas • Jabón • Exfoliantes">
+
+  <p class="tag"
+     data-en="Candles • Soap • Scrubs"
+     data-es="Velas • Jabón • Exfoliantes">
     Candles • Soap • Scrubs
   </p>
-  <p data-en="A calming herb with a sweet floral scent. Great for relaxing candles and moisturizing soaps."
-     data-es="Una hierba calmante con aroma floral dulce. Perfecta para velas relajantes y jabones hidratantes.">
+
+  <p
+    data-en="A calming herb with a sweet floral scent. Great for relaxing candles and moisturizing soaps."
+    data-es="Una hierba calmante con aroma floral dulce. Perfecta para velas relajantes y jabones hidratantes.">
     A calming herb with a sweet floral scent. Great for relaxing candles and moisturizing soaps.
   </p>
+
+  <button class="more-btn"
+          data-en="More info"
+          data-es="Más información">
+    More info
+  </button>
+
+  <div class="details hidden"></div>
 </div>
+
   
 </body>
 </html>
