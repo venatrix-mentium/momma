@@ -521,6 +521,16 @@
 <section id="translate" style="display:none;">
   <h2 class="section-title" data-en="Glossary" data-es="Glosario">Glossary</h2>
 
+  <div class="card" id="glossary-search-card">
+    <input
+      id="glossarySearch"
+      type="text"
+      placeholder="Search / Buscar"
+      oninput="filterGlossary()"
+      style="width:100%; padding:0.9rem 1rem; border-radius:0.8rem; border:1px solid var(--accent-1); font-size:1rem; font-family:var(--font-body);"
+    />
+  </div>
+  
   <div class="card">
     <h3>
       <span data-en="Growing words" data-es="Palabras de cultivo">
@@ -643,13 +653,12 @@
   const input = document.getElementById('glossarySearch');
   const query = input ? input.value.toLowerCase().trim() : '';
 
+  const searchCard = document.getElementById('glossary-search-card');
   const glossaryCards = document.querySelectorAll('#translate .card');
 
   glossaryCards.forEach(card => {
-    const hasSearchInput = input && card.contains(input);
-
-    // 1) Search box card is always visible, never filtered
-    if (hasSearchInput) {
+    // 1) Always keep the search card visible
+    if (searchCard && card === searchCard) {
       card.style.display = 'block';
       return;
     }
@@ -657,7 +666,7 @@
     const listItems = card.querySelectorAll('li');
     const otherItems = card.querySelectorAll('p, h3 span');
 
-    // 2) If query is empty, reset: show card and all bullets
+    // 2) If query is empty, reset everything
     if (!query) {
       card.style.display = 'block';
       listItems.forEach(li => {
@@ -666,9 +675,9 @@
       return;
     }
 
-    // 3) Query present: check each bullet line
     let matchFound = false;
 
+    // 3) Hide/show individual bullet lines
     listItems.forEach(li => {
       const text = li.textContent.toLowerCase();
       if (text.includes(query)) {
@@ -679,7 +688,7 @@
       }
     });
 
-    // 4) If no <li> matched, check other text (paragraphs, headings)
+    // 4) If no bullet lines matched, check other text in the card
     if (!matchFound) {
       otherItems.forEach(item => {
         const text = item.textContent.toLowerCase();
@@ -689,7 +698,7 @@
       });
     }
 
-    // 5) Show or hide the whole card based on match
+    // 5) Show/hide the whole card based on whether anything matched
     card.style.display = matchFound ? 'block' : 'none';
   });
 }
