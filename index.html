@@ -646,8 +646,10 @@
   const glossaryCards = document.querySelectorAll('#translate .card');
 
   glossaryCards.forEach(card => {
-    // keep the card that holds the search input always visible
-    if (card.contains(input)) {
+    const hasSearchInput = input && card.contains(input);
+
+    // 1) Search box card is always visible, never filtered
+    if (hasSearchInput) {
       card.style.display = 'block';
       return;
     }
@@ -655,7 +657,7 @@
     const listItems = card.querySelectorAll('li');
     const otherItems = card.querySelectorAll('p, h3 span');
 
-    // if query is empty, reset everything (show all cards and bullets)
+    // 2) If query is empty, reset: show card and all bullets
     if (!query) {
       card.style.display = 'block';
       listItems.forEach(li => {
@@ -664,9 +666,9 @@
       return;
     }
 
+    // 3) Query present: check each bullet line
     let matchFound = false;
 
-    // check and show/hide each bullet line
     listItems.forEach(li => {
       const text = li.textContent.toLowerCase();
       if (text.includes(query)) {
@@ -677,7 +679,7 @@
       }
     });
 
-    // if no <li> matched, fall back to other text in the card (paragraphs, title)
+    // 4) If no <li> matched, check other text (paragraphs, headings)
     if (!matchFound) {
       otherItems.forEach(item => {
         const text = item.textContent.toLowerCase();
@@ -687,7 +689,7 @@
       });
     }
 
-    // show card only if something matched
+    // 5) Show or hide the whole card based on match
     card.style.display = matchFound ? 'block' : 'none';
   });
 }
