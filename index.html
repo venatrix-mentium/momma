@@ -624,66 +624,236 @@
 
     // ─── Herb detail data ───────────────────────────────────────
     const herbs = [
-  {
-    id: "basil",
-    en: { name:"Basil", tag:"Soap • Oils • Garden Fresh", desc:"A sweet green herb that brings a fresh garden feel to handmade products. Great for warm-season growing and herbal blends.", sun:"Full sun to part sun", water:"Moderate", planting:"Bed or container", fit:"Very good in warm weather, but tender in cold snaps", oil:"Use dried leaves only for infusions", soap:"Nice in garden-fresh or citrus-herbal soap blends", caution:"Can wilt quickly in strong heat if it dries out" },
-    es: { name:"Albahaca", tag:"Jabón • Aceites • Fresco del jardín", desc:"Una hierba verde y dulce que aporta una sensación fresca de jardín a los productos artesanales. Excelente para climas cálidos y mezclas herbales.", sun:"Sol pleno a parcial", water:"Moderada", planting:"Jardín o maceta", fit:"Muy buena en clima cálido, pero sensible al frío", oil:"Usa solo hojas secas para infusiones", soap:"Ideal para mezclas de jabón frescas o cítrico-herbales", caution:"Puede marchitarse rápido con calor fuerte si se seca demasiado" }
+    basil: {
+    en: {
+      sun: "Full sun to part sun",
+      water: "Moderate",
+      planting: "Bed or container",
+      backyardFit: "Very good in warm weather, but tender in cold snaps",
+      oilInfo: "Use dried leaves only for infusions",
+      soapInfo: "Nice in garden-fresh or citrus-herbal soap blends",
+      caution: "Can wilt quickly in strong heat if it dries out"
+    },
+    es: {
+      sun: "Sol pleno a parcial",
+      water: "Moderada",
+      planting: "Jardín o maceta",
+      backyardFit: "Muy buena en clima cálido, pero sensible al frío",
+      oilInfo: "Usa solo hojas secas para infusiones",
+      soapInfo: "Ideal para mezclas de jabón frescas o cítrico-herbales",
+      caution: "Puede marchitarse rápido con calor fuerte si se seca demasiado"
+    }
   },
-  {
-    id: "calendula",
-    en: { name:"Calendula", tag:"Soap • Oils • Salves", desc:"Bright petals that are beautiful in soap and especially loved for infused oils.", sun:"Full sun to part sun", water:"Moderate", planting:"Best in the cooler season", fit:"Great for soap making, not ideal in peak summer heat", oil:"Use dried petals — one of the best for beginners", soap:"Excellent for soothing soaps and petal decoration", caution:"Dry petals fully before adding to oil" },
-    es: { name:"Caléndula", tag:"Jabón • Aceites • Ungüentos", desc:"Pétalos brillantes que lucen hermosos en jabón y son muy apreciados para aceites infusionados.", sun:"Sol pleno a parcial", water:"Moderada", planting:"Mejor en temporada fresca", fit:"Ideal para jabón, no le encanta el calor extremo", oil:"Usa pétalos secos — una de las mejores para principiantes", soap:"Excelente para jabones suaves y decoración", caution:"Seca bien los pétalos antes de ponerlos en aceite" }
+
+  sage: {
+    en: {
+      sun: "Full sun",
+      water: "Low to moderate",
+      planting: "Bed or container with good drainage",
+      backyardFit: "Strong choice for San Antonio heat",
+      oilInfo: "Use dried leaves in infused oils",
+      soapInfo: "Excellent for earthy herbal soaps",
+      caution: "Does not like soggy soil"
+    },
+    es: {
+      sun: "Sol pleno",
+      water: "Baja a moderada",
+      planting: "Jardín o maceta con buen drenaje",
+      backyardFit: "Muy buena opción para el calor de San Antonio",
+      oilInfo: "Usa hojas secas en aceites infusionados",
+      soapInfo: "Excelente para jabones herbales y terrosos",
+      caution: "No le gusta la tierra encharcada"
+    }
   },
-  {
-    id: "chamomile",
-    en: { name:"Chamomile", tag:"Soap • Oils • Bath Care", desc:"A soft flower with a gentle traditional feel. Lovely in calming soaps, baths, and skin-care inspired creations.", sun:"Full sun to part sun", water:"Moderate", planting:"Bed or container in cooler season", fit:"Better in milder weather than in peak summer", oil:"Use dried flower heads for infusion", soap:"Excellent in gentle and calming body-care themes", caution:"Heat can shorten bloom time" },
-    es: { name:"Manzanilla", tag:"Jabón • Aceites • Cuidado de baño", desc:"Una flor suave con un aire tradicional delicado. Hermosa en jabones calmantes, baños y creaciones inspiradas en el cuidado de la piel.", sun:"Sol pleno a parcial", water:"Moderada", planting:"Jardín o maceta en temporada fresca", fit:"Mejor en clima suave que en pleno verano", oil:"Usa flores secas para la infusión", soap:"Excelente en temas suaves y calmantes de cuidado corporal", caution:"El calor puede acortar el tiempo de floración" }
+
+  thyme: {
+    en: {
+      sun: "Full sun",
+      water: "Low",
+      planting: "Raised bed, border, or container",
+      backyardFit: "Very reliable once established",
+      oilInfo: "Use dried herb only",
+      soapInfo: "Great in clean herbal and rustic soap themes",
+      caution: "Needs drainage more than frequent watering"
+    },
+    es: {
+      sun: "Sol pleno",
+      water: "Baja",
+      planting: "Cama elevada, borde o maceta",
+      backyardFit: "Muy confiable una vez establecido",
+      oilInfo: "Usa solo la hierba seca",
+      soapInfo: "Excelente en temas de jabón herbal limpio y rústico",
+      caution: "Necesita más drenaje que riego frecuente"
+    }
   },
-  {
-    id: "lavender",
-    en: { name:"Lavender", tag:"Candles • Soap • Scrubs", desc:"A calming herb with a sweet floral scent. Great for relaxing candles and moisturizing soaps.", sun:"Full sun", water:"Low", planting:"Raised bed or container with excellent drainage", fit:"Good for San Antonio if soil drains well", oil:"Use fully dried buds only", soap:"Great in soaps, scrubs, and botanical blends", caution:"Fresh plant material can spoil oil infusions" },
-    es: { name:"Lavanda", tag:"Velas • Jabón • Exfoliantes", desc:"Una hierba calmante con aroma floral dulce. Perfecta para velas relajantes y jabones hidratantes.", sun:"Sol pleno", water:"Poca", planting:"Cama elevada o maceta con buen drenaje", fit:"Buena para San Antonio si el suelo drena bien", oil:"Usa flores completamente secas", soap:"Excelente en jabones, exfoliantes y mezclas botánicas", caution:"El material fresco puede arruinar la infusión" }
+
+  oregano: {
+    en: {
+      sun: "Full sun",
+      water: "Low to moderate",
+      planting: "Bed or container",
+      backyardFit: "Hardy and easy in warm sunny spaces",
+      oilInfo: "Use fully dried leaves only",
+      soapInfo: "Good for rustic or strong herbal blends",
+      caution: "A little goes a long way in scent themes"
+    },
+    es: {
+      sun: "Sol pleno",
+      water: "Baja a moderada",
+      planting: "Jardín o maceta",
+      backyardFit: "Resistente y fácil en lugares cálidos y soleados",
+      oilInfo: "Usa solo hojas completamente secas",
+      soapInfo: "Bueno para mezclas rústicas o herbales intensas",
+      caution: "Un poco rinde mucho en perfiles aromáticos"
+    }
   },
-  {
-    id: "lemon-balm",
-    en: { name:"Lemon Balm", tag:"Soap • Oils • Calming", desc:"A gentle lemony herb often associated with soothing, calming body-care blends and soft garden scents.", sun:"Morning sun, afternoon shade", water:"Moderate", planting:"Container or protected bed", fit:"Good, but appreciates gentler conditions than peak summer heat", oil:"Use dried leaves only", soap:"Lovely in calming and soft citrus-herbal blends", caution:"Can struggle in extreme afternoon heat" },
-    es: { name:"Toronjil", tag:"Jabón • Aceites • Calmante", desc:"Una hierba suave con toque de limón, asociada con mezclas calmantes para el cuerpo y aromas delicados de jardín.", sun:"Sol por la mañana, sombra por la tarde", water:"Moderada", planting:"Maceta o jardín protegido", fit:"Buena, pero prefiere condiciones más suaves que el calor extremo del verano", oil:"Usa solo hojas secas", soap:"Hermosa en mezclas calmantes y cítrico-herbales suaves", caution:"Puede sufrir con el calor extremo de la tarde" }
+
+  "lemon-balm": {
+    en: {
+      sun: "Morning sun, afternoon shade",
+      water: "Moderate",
+      planting: "Container or protected bed",
+      backyardFit: "Good, but appreciates gentler conditions than peak summer heat",
+      oilInfo: "Use dried leaves only",
+      soapInfo: "Lovely in calming and soft citrus-herbal blends",
+      caution: "Can struggle in extreme afternoon heat"
+    },
+    es: {
+      sun: "Sol por la mañana, sombra por la tarde",
+      water: "Moderada",
+      planting: "Maceta o jardín protegido",
+      backyardFit: "Buena, pero prefiere condiciones más suaves que el calor extremo del verano",
+      oilInfo: "Usa solo hojas secas",
+      soapInfo: "Hermosa en mezclas calmantes y cítrico-herbales suaves",
+      caution: "Puede sufrir con el calor extremo de la tarde"
+    }
   },
-  {
-    id: "lemongrass",
-    en: { name:"Lemongrass", tag:"Soap • Candles • Oils", desc:"A bright, citrusy plant that loves heat and adds a fresh vibe to handmade products.", sun:"Full sun", water:"Moderate", planting:"Bed or large container", fit:"Excellent for hot South Texas weather", oil:"Use dried chopped leaves for gentle infusions", soap:"Great for fresh citrus-herbal soap themes", caution:"For candle scent, use fragrance or essential oil for best throw" },
-    es: { name:"Hierba de limón", tag:"Jabón • Velas • Aceites", desc:"Una planta cítrica y fresca que ama el calor y aporta una vibra limpia a los productos artesanales.", sun:"Sol pleno", water:"Moderada", planting:"Jardín o maceta grande", fit:"Excelente para el clima caluroso del sur de Texas", oil:"Usa hojas secas picadas para infusiones suaves", soap:"Excelente para jabones con perfil cítrico y herbal", caution:"Para velas, usa fragancia o aceite esencial para mejor aroma" }
+
+  chamomile: {
+    en: {
+      sun: "Full sun to part sun",
+      water: "Moderate",
+      planting: "Bed or container in cooler season",
+      backyardFit: "Better in milder weather than in peak summer",
+      oilInfo: "Use dried flower heads for infusion",
+      soapInfo: "Excellent in gentle and calming body-care themes",
+      caution: "Heat can shorten bloom time"
+    },
+    es: {
+      sun: "Sol pleno a parcial",
+      water: "Moderada",
+      planting: "Jardín o maceta en temporada fresca",
+      backyardFit: "Mejor en clima suave que en pleno verano",
+      oilInfo: "Usa flores secas para la infusión",
+      soapInfo: "Excelente en temas suaves y calmantes de cuidado corporal",
+      caution: "El calor puede acortar el tiempo de floración"
+    }
   },
-  {
-    id: "mint",
-    en: { name:"Mint", tag:"Soap • Scrubs • Bath Blends", desc:"A refreshing herb that grows fast and works beautifully in cooling, clean-scented blends.", sun:"Morning sun, afternoon shade", water:"Moderate", planting:"Container strongly recommended", fit:"Grows well but spreads aggressively in beds", oil:"Use dried leaves only", soap:"Great for refreshing and cooling soap blends", caution:"Keep in pots so it does not take over the garden" },
-    es: { name:"Menta", tag:"Jabón • Exfoliantes • Baños", desc:"Una hierba refrescante que crece rápido y funciona muy bien en mezclas limpias y frescas.", sun:"Sol mañanero, sombra por la tarde", water:"Moderada", planting:"Se recomienda maceta", fit:"Crece bien pero se extiende mucho en jardín abierto", oil:"Usa solo hojas secas", soap:"Excelente para mezclas de jabón refrescantes", caution:"Mejor en maceta para que no invada el jardín" }
-  },
-  {
-    id: "oregano",
-    en: { name:"Oregano", tag:"Soap • Oils • Strong Herbal", desc:"A bold warm herb that grows well in sunny spaces. Nice for rustic herbal themes and garden-inspired blends.", sun:"Full sun", water:"Low to moderate", planting:"Bed or container", fit:"Hardy and easy in warm sunny spaces", oil:"Use fully dried leaves only", soap:"Good for rustic or strong herbal blends", caution:"A little goes a long way in scent themes" },
-    es: { name:"Orégano", tag:"Jabón • Aceites • Herbal intenso", desc:"Una hierba intensa y cálida que crece bien en lugares soleados. Ideal para temas herbales rústicos y mezclas inspiradas en el jardín.", sun:"Sol pleno", water:"Baja a moderada", planting:"Jardín o maceta", fit:"Resistente y fácil en lugares cálidos y soleados", oil:"Usa solo hojas completamente secas", soap:"Bueno para mezclas rústicas o herbales intensas", caution:"Un poco rinde mucho en perfiles aromáticos" }
-  },
-  {
-    id: "rose",
-    en: { name:"Rose", tag:"Candles • Soap • Petals", desc:"A classic floral favorite that adds romance and softness to soaps, candles, and decorative botanical projects.", sun:"Full sun", water:"Moderate", planting:"Garden bed or large container", fit:"Can do well with good variety choice and regular care", oil:"Petals can be infused for gentle botanical value", soap:"Beautiful in floral soaps and petal decoration", caution:"Use only clean, unsprayed petals in body-care projects" },
-    es: { name:"Rosa", tag:"Velas • Jabón • Pétalos", desc:"Una favorita floral clásica que añade romance y suavidad a jabones, velas y proyectos botánicos decorativos.", sun:"Sol pleno", water:"Moderada", planting:"Jardín o maceta grande", fit:"Puede ir bien con buena variedad y cuidado regular", oil:"Los pétalos pueden infusionarse para un valor botánico suave", soap:"Hermosa en jabones florales y decoración con pétalos", caution:"Usa solo pétalos limpios y sin químicos en productos corporales" }
-  },
-  {
-    id: "rosemary",
-    en: { name:"Rosemary", tag:"Candles • Soap • Oils", desc:"A sturdy herbal favorite with a clean, woodsy scent. Wonderful for rustic soaps and garden-inspired candles.", sun:"Full sun", water:"Low to moderate", planting:"Backyard bed or large container", fit:"One of the most reliable herbs for San Antonio", oil:"Infuse dried leaves in olive or sunflower oil", soap:"Excellent for herbal and rustic soaps", caution:"Do not overload loose herbs near open flame" },
-    es: { name:"Romero", tag:"Velas • Jabón • Aceites", desc:"Una favorita herbal resistente con aroma limpio y amaderado. Ideal para jabones rústicos y velas inspiradas en el jardín.", sun:"Sol pleno", water:"Baja a moderada", planting:"Jardín o maceta grande", fit:"Una de las hierbas más confiables para San Antonio", oil:"Infusiona hojas secas en aceite de oliva o girasol", soap:"Excelente para jabones herbales y rústicos", caution:"No uses demasiadas hierbas sueltas cerca de la llama" }
-  },
-  {
-    id: "sage",
-    en: { name:"Sage", tag:"Soap • Candles • Oils", desc:"A soft earthy herb with a classic herbal scent. Beautiful in rustic soaps and cozy candle blends.", sun:"Full sun", water:"Low to moderate", planting:"Bed or container with good drainage", fit:"Strong choice for San Antonio heat", oil:"Use dried leaves in infused oils", soap:"Excellent for earthy herbal soaps", caution:"Does not like soggy soil" },
-    es: { name:"Salvia", tag:"Jabón • Velas • Aceites", desc:"Una hierba suave y terrosa con un aroma herbal clásico. Hermosa en jabones rústicos y mezclas acogedoras para velas.", sun:"Sol pleno", water:"Baja a moderada", planting:"Jardín o maceta con buen drenaje", fit:"Muy buena opción para el calor de San Antonio", oil:"Usa hojas secas en aceites infusionados", soap:"Excelente para jabones herbales y terrosos", caution:"No le gusta la tierra encharcada" }
-  },
-  {
-    id: "thyme",
-    en: { name:"Thyme", tag:"Soap • Oils • Herbal Care", desc:"A sturdy little herb that does well in heat and adds a clean herbal character to soaps and infused oils.", sun:"Full sun", water:"Low", planting:"Raised bed, border, or container", fit:"Very reliable once established", oil:"Use dried herb only", soap:"Great in clean herbal and rustic soap themes", caution:"Needs drainage more than frequent watering" },
-    es: { name:"Tomillo", tag:"Jabón • Aceites • Cuidado herbal", desc:"Una hierba pequeña y resistente que soporta bien el calor y aporta un carácter herbal limpio a jabones y aceites infusionados.", sun:"Sol pleno", water:"Baja", planting:"Cama elevada, borde o maceta", fit:"Muy confiable una vez establecido", oil:"Usa solo la hierba seca", soap:"Excelente en temas de jabón herbal limpio y rústico", caution:"Necesita más drenaje que riego frecuente" }
+
+  rose: {
+    en: {
+      sun: "Full sun",
+      water: "Moderate",
+      planting: "Garden bed or large container",
+      backyardFit: "Can do well with good variety choice and regular care",
+      oilInfo: "Petals can be infused for gentle botanical value",
+      soapInfo: "Beautiful in floral soaps and petal decoration",
+      caution: "Use only clean, unsprayed petals in body-care projects"
+    },
   }
+    es: {
+      sun: "Sol pleno",
+      water: "Moderada",
+      planting: "Jardín o maceta grande",
+      backyardFit: "Puede ir bien con buena variedad y cuidado regular",
+      oilInfo: "Los pétalos pueden infusionarse para un valor botánico suave",
+      soapInfo: "Hermosa en jabones florales y decoración con pétalos",
+      caution: "Usa solo pétalos limpios y sin químicos en productos corporales"
+    },
+  {
+  id: "cornflower",
+  en: {
+    name: "Cornflower",
+    tag: "Soap • Petals • Decorative",
+    desc: "A delicate blue flower mostly used as a decorative botanical in soaps and gift-style creations.",
+    sun: "Full sun",
+    water: "Moderate",
+    planting: "Bed or container in mild season",
+    fit: "Better in gentler weather than extreme summer heat",
+    oil: "Usually used more for decoration than infused oil",
+    soap: "Best as a dried topper or decorative accent",
+    caution: "Mostly decorative, and petals may fade over time"
+  },
+}
+  es: {
+    name: "Aciano",
+    tag: "Jabón • Pétalos • Decorativo",
+    desc: "Una flor azul delicada que se usa principalmente como botánico decorativo en jabones y creaciones para regalo.",
+    sun: "Sol pleno",
+    water: "Moderada",
+    planting: "Jardín o maceta en temporada suave",
+    fit: "Mejor en clima moderado que en calor extremo",
+    oil: "Generalmente se usa más para decoración que para aceite infusionado",
+    soap: "Mejor como adorno seco o acento decorativo",
+    caution: "Es mayormente decorativa y los pétalos pueden perder color con el tiempo"
+},
+{
+  id: "hibiscus",
+  en: {
+    name: "Hibiscus",
+    tag: "Soap • Bath Blends • Color",
+    desc: "A vibrant flower that thrives in South Texas heat and adds a bold botanical feel to bath and body projects.",
+    sun: "Full sun",
+    water: "Moderate",
+    planting: "Backyard shrub or large container",
+    fit: "Excellent for San Antonio heat",
+    oil: "Often used dried for color-forward herbal preparations more than strong scent",
+    soap: "Lovely in tropical, floral, and color-rich soap themes",
+    caution: "Different hibiscus varieties behave differently in body-care projects"
+  },
+}
+  es: {
+    name: "Hibisco",
+    tag: "Jabón • Baños • Color",
+    desc: "Una flor vibrante que prospera en el calor del sur de Texas y añade un toque botánico intenso a proyectos de baño y cuerpo.",
+    sun: "Sol pleno",
+    water: "Moderada",
+    planting: "Arbusto en jardín o maceta grande",
+    fit: "Excelente para el calor de San Antonio",
+    oil: "A menudo se usa seca para preparaciones herbales con color más que por su aroma",
+    soap: "Hermosa en jabones tropicales, florales y llenos de color",
+    caution: "Las distintas variedades de hibisco se comportan diferente en productos corporales"
+},
+}
+{
+  id: "yarrow",
+  en: {
+    name: "Yarrow",
+    tag: "Soap • Oils • Traditional Herbal",
+    desc: "A hardy flowering herb with a long traditional history and a beautiful old-world herbal vibe.",
+    sun: "Full sun",
+    water: "Low to moderate",
+    planting: "Sunny bed with good drainage",
+    fit: "Good in hot sunny spaces once established",
+    oil: "Can be used in herbal infusions with dried flowers and leaves",
+    soap: "Works well in rustic or traditional herbal soap themes",
+    caution: "Best for careful herbal use and good plant identification"
+  },
+}
+  es: {
+    name: "Milenrama",
+    tag: "Jabón • Aceites • Herbal tradicional",
+    desc: "Una hierba florida resistente con una larga historia tradicional y un hermoso estilo herbal antiguo.",
+    sun: "Sol pleno",
+    water: "Baja a moderada",
+    planting: "Jardín soleado con buen drenaje",
+    fit: "Buena en lugares cálidos y soleados una vez establecida",
+    oil: "Puede usarse en infusiones herbales con flores y hojas secas",
+    soap: "Funciona bien en temas de jabón herbal rústico o tradicional",
+    caution: "Mejor para un uso herbal cuidadoso y buena identificación de la planta"
+  }
+}
+
 ];
 
 
