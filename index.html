@@ -596,9 +596,9 @@
 
     // Show herbs tab by default
     document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('main section').forEach(s => s.style.display = 'none');
-      const herbsSection = document.getElementById('herbs');
-      if (herbsSection) herbsSection.style.display = 'block';
+    document.querySelectorAll('main section').forEach(s => s.style.display = 'none');
+    document.getElementById('herbs').style.display = 'block';
+    renderHerbs(); // ← add this
     });
 
     let currentLang = 'en';
@@ -613,6 +613,7 @@
       document.querySelectorAll('[data-en]').forEach(el => {
         el.textContent = el.getAttribute('data-' + currentLang);
       });
+      renderHerbs(); // ← re-sorts in Spanish/English
 
       // Re-render open details so their labels switch language too
       document.querySelectorAll('.card .details:not(.hidden)').forEach(cardDetails => {
