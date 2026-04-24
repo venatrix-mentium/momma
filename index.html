@@ -520,6 +520,15 @@
 
 <section id="translate" style="display:none;">
   <h2 class="section-title" data-en="Glossary" data-es="Glosario">Glossary</h2>
+<div class="card">
+  <input
+    id="glossarySearch"
+    type="text"
+    placeholder="Search / Buscar"
+    oninput="filterGlossary()"
+    style="width:100%; padding:0.9rem 1rem; border-radius:0.8rem; border:1px solid var(--accent-1); font-size:1rem; font-family:var(--font-body);"
+  />
+</div>
 
   <div class="card">
     <h3>
@@ -530,54 +539,103 @@
     <ul class="ingredients">
       <li><span data-en="Full sun = Sol pleno" data-es="Full sun = Sol pleno">Full sun = Sol pleno</span></li>
       <li><span data-en="Part sun = Sol parcial" data-es="Part sun = Sol parcial">Part sun = Sol parcial</span></li>
+      <li><span data-en="Part shade = Sombra parcial" data-es="Part shade = Sombra parcial">Part shade = Sombra parcial</span></li>
       <li><span data-en="Shade = Sombra" data-es="Shade = Sombra">Shade = Sombra</span></li>
       <li><span data-en="Drainage = Drenaje" data-es="Drainage = Drenaje">Drainage = Drenaje</span></li>
+      <li><span data-en="Well-drained soil = Suelo con buen drenaje" data-es="Well-drained soil = Suelo con buen drenaje">Well-drained soil = Suelo con buen drenaje</span></li>
       <li><span data-en="Raised bed = Cama elevada" data-es="Raised bed = Cama elevada">Raised bed = Cama elevada</span></li>
       <li><span data-en="Container = Maceta / Contenedor" data-es="Container = Maceta / Contenedor">Container = Maceta / Contenedor</span></li>
       <li><span data-en="Perennial = Perenne" data-es="Perennial = Perenne">Perennial = Perenne</span></li>
       <li><span data-en="Annual = Anual" data-es="Annual = Anual">Annual = Anual</span></li>
       <li><span data-en="Harvest = Cosechar" data-es="Harvest = Cosechar">Harvest = Cosechar</span></li>
       <li><span data-en="Prune / clip = Podar / recortar" data-es="Prune / clip = Podar / recortar">Prune / clip = Podar / recortar</span></li>
+      <li><span data-en="Establish = Establecerse" data-es="Establish = Establecerse">Establish = Establecerse</span></li>
+      <li><span data-en="Drought tolerant = Tolerante a la sequía" data-es="Drought tolerant = Tolerante a la sequía">Drought tolerant = Tolerante a la sequía</span></li>
     </ul>
   </div>
 
   <div class="card">
     <h3>
-      <span data-en="Oil and soap words" data-es="Palabras de aceite y jabón">
-        Oil and soap words
+      <span data-en="Oil and herbal prep words" data-es="Palabras de aceites y preparaciones herbales">
+        Oil and herbal prep words
       </span>
     </h3>
     <ul class="ingredients">
       <li><span data-en="Infused oil = Aceite infusionado" data-es="Infused oil = Aceite infusionado">Infused oil = Aceite infusionado</span></li>
       <li><span data-en="Carrier oil = Aceite base" data-es="Carrier oil = Aceite base">Carrier oil = Aceite base</span></li>
+      <li><span data-en="Essential oil = Aceite esencial" data-es="Essential oil = Aceite esencial">Essential oil = Aceite esencial</span></li>
       <li><span data-en="Dried herbs = Hierbas secas" data-es="Dried herbs = Hierbas secas">Dried herbs = Hierbas secas</span></li>
+      <li><span data-en="Petals = Pétalos" data-es="Petals = Pétalos">Petals = Pétalos</span></li>
       <li><span data-en="Strain = Colar" data-es="Strain = Colar">Strain = Colar</span></li>
-      <li><span data-en="Salve = Ungüento" data-es="Salve = Ungüento">Salve = Ungüento</span></li>
       <li><span data-en="Topical = De uso externo" data-es="Topical = De uso externo">Topical = De uso externo</span></li>
-      <li><span data-en="Soap mold = Molde para jabón" data-es="Soap mold = Molde para jabón">Soap mold = Molde para jabón</span></li>
-      <li><span data-en="Botanicals = Botánicos" data-es="Botanicals = Botánicos">Botanicals = Botánicos</span></li>
+      <li><span data-en="Salve = Ungüento" data-es="Salve = Ungüento">Salve = Ungüento</span></li>
+      <li><span data-en="Poultice = Cataplasma" data-es="Poultice = Cataplasma">Poultice = Cataplasma</span></li>
+      <li><span data-en="Infusion = Infusión" data-es="Infusion = Infusión">Infusion = Infusión</span></li>
+      <li><span data-en="Decoction = Decocción" data-es="Decoction = Decocción">Decoction = Decocción</span></li>
+      <li><span data-en="Tincture = Tintura" data-es="Tincture = Tintura">Tincture = Tintura</span></li>
+      <li><span data-en="Steep = Dejar reposar" data-es="Steep = Dejar reposar">Steep = Dejar reposar</span></li>
+      <li><span data-en="Beeswax = Cera de abeja" data-es="Beeswax = Cera de abeja">Beeswax = Cera de abeja</span></li>
     </ul>
   </div>
-  
+
   <div class="card">
-  <h3>
-    <span data-en="Recipe words" data-es="Palabras de recetas">
-      Recipe words
-    </span>
-  </h3>
-  <ul class="ingredients">
-    <li><span data-en="Wax = Cera" data-es="Wax = Cera">Wax = Cera</span></li>
-    <li><span data-en="Wick = Mecha" data-es="Wick = Mecha">Wick = Mecha</span></li>
-    <li><span data-en="Fragrance oil = Aceite de fragancia" data-es="Fragrance oil = Aceite de fragancia">Fragrance oil = Aceite de fragancia</span></li>
-    <li><span data-en="Essential oil = Aceite esencial" data-es="Essential oil = Aceite esencial">Essential oil = Aceite esencial</span></li>
-    <li><span data-en="Soap base = Base de jabón" data-es="Soap base = Base de jabón">Soap base = Base de jabón</span></li>
-    <li><span data-en="Melt and pour = Derretir y verter" data-es="Melt and pour = Derretir y verter">Melt and pour = Derretir y verter</span></li>
-    <li><span data-en="Scrub = Exfoliante" data-es="Scrub = Exfoliante">Scrub = Exfoliante</span></li>
-    <li><span data-en="Jar = Frasco" data-es="Jar = Frasco">Jar = Frasco</span></li>
-    <li><span data-en="Stir = Revolver" data-es="Stir = Revolver">Stir = Revolver</span></li>
-    <li><span data-en="Cool = Enfriar" data-es="Cool = Enfriar">Cool = Enfriar</span></li>
-  </ul>
-</div>
+    <h3>
+      <span data-en="Soap words" data-es="Palabras de jabón">
+        Soap words
+      </span>
+    </h3>
+    <ul class="ingredients">
+      <li><span data-en="Soap base = Base de jabón" data-es="Soap base = Base de jabón">Soap base = Base de jabón</span></li>
+      <li><span data-en="Melt and pour = Derretir y verter" data-es="Melt and pour = Derretir y verter">Melt and pour = Derretir y verter</span></li>
+      <li><span data-en="Lye = Lejía / sosa cáustica" data-es="Lye = Lejía / sosa cáustica">Lye = Lejía / sosa cáustica</span></li>
+      <li><span data-en="Saponification = Saponificación" data-es="Saponification = Saponificación">Saponification = Saponificación</span></li>
+      <li><span data-en="Trace = Traza" data-es="Trace = Traza">Trace = Traza</span></li>
+      <li><span data-en="Superfat = Sobreengrasado" data-es="Superfat = Sobreengrasado">Superfat = Sobreengrasado</span></li>
+      <li><span data-en="Cure = Curar / curado" data-es="Cure = Curar / curado">Cure = Curar / curado</span></li>
+      <li><span data-en="Mold = Molde" data-es="Mold = Molde">Mold = Molde</span></li>
+      <li><span data-en="Batch = Lote" data-es="Batch = Lote">Batch = Lote</span></li>
+      <li><span data-en="Fragrance oil = Aceite de fragancia" data-es="Fragrance oil = Aceite de fragancia">Fragrance oil = Aceite de fragancia</span></li>
+      <li><span data-en="Botanicals = Botánicos" data-es="Botanicals = Botánicos">Botanicals = Botánicos</span></li>
+      <li><span data-en="Emulsion = Emulsión" data-es="Emulsion = Emulsión">Emulsion = Emulsión</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>
+      <span data-en="Candle and recipe words" data-es="Palabras de velas y recetas">
+        Candle and recipe words
+      </span>
+    </h3>
+    <ul class="ingredients">
+      <li><span data-en="Wax = Cera" data-es="Wax = Cera">Wax = Cera</span></li>
+      <li><span data-en="Wick = Mecha" data-es="Wick = Mecha">Wick = Mecha</span></li>
+      <li><span data-en="Jar = Frasco" data-es="Jar = Frasco">Jar = Frasco</span></li>
+      <li><span data-en="Melt = Derretir" data-es="Melt = Derretir">Melt = Derretir</span></li>
+      <li><span data-en="Pour = Verter" data-es="Pour = Verter">Pour = Verter</span></li>
+      <li><span data-en="Cool = Enfriar" data-es="Cool = Enfriar">Cool = Enfriar</span></li>
+      <li><span data-en="Stir = Revolver" data-es="Stir = Revolver">Stir = Revolver</span></li>
+      <li><span data-en="Measure = Medir" data-es="Measure = Medir">Measure = Medir</span></li>
+      <li><span data-en="Scrub = Exfoliante" data-es="Scrub = Exfoliante">Scrub = Exfoliante</span></li>
+      <li><span data-en="Recipe = Receta" data-es="Recipe = Receta">Recipe = Receta</span></li>
+      <li><span data-en="Ingredient = Ingrediente" data-es="Ingredient = Ingrediente">Ingredient = Ingrediente</span></li>
+      <li><span data-en="Heat-safe = Resistente al calor" data-es="Heat-safe = Resistente al calor">Heat-safe = Resistente al calor</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>
+      <span data-en="Helpful note" data-es="Nota útil">
+        Helpful note
+      </span>
+    </h3>
+    <p
+      data-en="Some words can have more than one correct translation depending on the craft context. This glossary is meant to be practical and easy to use while making products."
+      data-es="Algunas palabras pueden tener más de una traducción correcta según el contexto artesanal. Este glosario está pensado para ser práctico y fácil de usar mientras se elaboran productos.">
+      Some words can have more than one correct translation depending on the craft context. This glossary is meant to be practical and easy to use while making products.
+    </p>
+  </div>
+</section>
+
 
 </section>
 
@@ -593,6 +651,21 @@
         event.currentTarget.style.fontWeight = 'bold';
       }
     }
+    
+    function filterGlossary() {
+  const input = document.getElementById('glossarySearch');
+  const query = input ? input.value.toLowerCase().trim() : '';
+
+  const glossaryCards = document.querySelectorAll('#translate .card');
+
+  glossaryCards.forEach(card => {
+    if (card.querySelector('#glossarySearch')) return;
+
+    const text = card.textContent.toLowerCase();
+    card.style.display = text.includes(query) ? 'block' : 'none';
+  });
+}
+
 
     // Show herbs tab by default
     document.addEventListener('DOMContentLoaded', () => {
@@ -624,238 +697,426 @@
 
     // ─── Herb detail data ───────────────────────────────────────
     const herbs = [
-    basil: {
+  {
+    id: "basil",
     en: {
+      name: "Basil",
+      tag: "Soap • Oils • Garden Fresh",
+      desc: "A sweet green herb that brings a fresh garden feel to handmade products. Great for warm-season growing and herbal blends.",
       sun: "Full sun to part sun",
       water: "Moderate",
       planting: "Bed or container",
-      backyardFit: "Very good in warm weather, but tender in cold snaps",
-      oilInfo: "Use dried leaves only for infusions",
-      soapInfo: "Nice in garden-fresh or citrus-herbal soap blends",
+      fit: "Very good in warm weather, but tender in cold snaps",
+      oil: "Use dried leaves only for infusions",
+      soap: "Nice in garden-fresh or citrus-herbal soap blends",
       caution: "Can wilt quickly in strong heat if it dries out"
     },
     es: {
+      name: "Albahaca",
+      tag: "Jabón • Aceites • Fresco del jardín",
+      desc: "Una hierba verde y dulce que aporta una sensación fresca de jardín a los productos artesanales. Excelente para climas cálidos y mezclas herbales.",
       sun: "Sol pleno a parcial",
       water: "Moderada",
       planting: "Jardín o maceta",
-      backyardFit: "Muy buena en clima cálido, pero sensible al frío",
-      oilInfo: "Usa solo hojas secas para infusiones",
-      soapInfo: "Ideal para mezclas de jabón frescas o cítrico-herbales",
+      fit: "Muy buena en clima cálido, pero sensible al frío",
+      oil: "Usa solo hojas secas para infusiones",
+      soap: "Ideal para mezclas de jabón frescas o cítrico-herbales",
       caution: "Puede marchitarse rápido con calor fuerte si se seca demasiado"
     }
   },
 
-  sage: {
+  {
+    id: "calendula",
     en: {
-      sun: "Full sun",
-      water: "Low to moderate",
-      planting: "Bed or container with good drainage",
-      backyardFit: "Strong choice for San Antonio heat",
-      oilInfo: "Use dried leaves in infused oils",
-      soapInfo: "Excellent for earthy herbal soaps",
-      caution: "Does not like soggy soil"
-    },
-    es: {
-      sun: "Sol pleno",
-      water: "Baja a moderada",
-      planting: "Jardín o maceta con buen drenaje",
-      backyardFit: "Muy buena opción para el calor de San Antonio",
-      oilInfo: "Usa hojas secas en aceites infusionados",
-      soapInfo: "Excelente para jabones herbales y terrosos",
-      caution: "No le gusta la tierra encharcada"
-    }
-  },
-
-  thyme: {
-    en: {
-      sun: "Full sun",
-      water: "Low",
-      planting: "Raised bed, border, or container",
-      backyardFit: "Very reliable once established",
-      oilInfo: "Use dried herb only",
-      soapInfo: "Great in clean herbal and rustic soap themes",
-      caution: "Needs drainage more than frequent watering"
-    },
-    es: {
-      sun: "Sol pleno",
-      water: "Baja",
-      planting: "Cama elevada, borde o maceta",
-      backyardFit: "Muy confiable una vez establecido",
-      oilInfo: "Usa solo la hierba seca",
-      soapInfo: "Excelente en temas de jabón herbal limpio y rústico",
-      caution: "Necesita más drenaje que riego frecuente"
-    }
-  },
-
-  oregano: {
-    en: {
-      sun: "Full sun",
-      water: "Low to moderate",
-      planting: "Bed or container",
-      backyardFit: "Hardy and easy in warm sunny spaces",
-      oilInfo: "Use fully dried leaves only",
-      soapInfo: "Good for rustic or strong herbal blends",
-      caution: "A little goes a long way in scent themes"
-    },
-    es: {
-      sun: "Sol pleno",
-      water: "Baja a moderada",
-      planting: "Jardín o maceta",
-      backyardFit: "Resistente y fácil en lugares cálidos y soleados",
-      oilInfo: "Usa solo hojas completamente secas",
-      soapInfo: "Bueno para mezclas rústicas o herbales intensas",
-      caution: "Un poco rinde mucho en perfiles aromáticos"
-    }
-  },
-
-  "lemon-balm": {
-    en: {
-      sun: "Morning sun, afternoon shade",
+      name: "Calendula",
+      tag: "Soap • Oils • Salves",
+      desc: "Bright petals that are beautiful in soap and especially loved for infused oils.",
+      sun: "Full sun to part sun",
       water: "Moderate",
-      planting: "Container or protected bed",
-      backyardFit: "Good, but appreciates gentler conditions than peak summer heat",
-      oilInfo: "Use dried leaves only",
-      soapInfo: "Lovely in calming and soft citrus-herbal blends",
-      caution: "Can struggle in extreme afternoon heat"
+      planting: "Best in the cooler season",
+      fit: "Great for soap making, not ideal in peak summer heat",
+      oil: "Use dried petals — one of the best for beginners",
+      soap: "Excellent for soothing soaps and petal decoration",
+      caution: "Dry petals fully before adding to oil"
     },
     es: {
-      sun: "Sol por la mañana, sombra por la tarde",
+      name: "Caléndula",
+      tag: "Jabón • Aceites • Ungüentos",
+      desc: "Pétalos brillantes que lucen hermosos en jabón y son muy apreciados para aceites infusionados.",
+      sun: "Sol pleno a parcial",
       water: "Moderada",
-      planting: "Maceta o jardín protegido",
-      backyardFit: "Buena, pero prefiere condiciones más suaves que el calor extremo del verano",
-      oilInfo: "Usa solo hojas secas",
-      soapInfo: "Hermosa en mezclas calmantes y cítrico-herbales suaves",
-      caution: "Puede sufrir con el calor extremo de la tarde"
+      planting: "Mejor en temporada fresca",
+      fit: "Ideal para jabón, no le encanta el calor extremo",
+      oil: "Usa pétalos secos — una de las mejores para principiantes",
+      soap: "Excelente para jabones suaves y decoración",
+      caution: "Seca bien los pétalos antes de ponerlos en aceite"
     }
   },
 
-  chamomile: {
+  {
+    id: "chamomile",
     en: {
+      name: "Chamomile",
+      tag: "Soap • Oils • Bath Care",
+      desc: "A soft flower with a gentle traditional feel. Lovely in calming soaps, baths, and skin-care inspired creations.",
       sun: "Full sun to part sun",
       water: "Moderate",
       planting: "Bed or container in cooler season",
-      backyardFit: "Better in milder weather than in peak summer",
-      oilInfo: "Use dried flower heads for infusion",
-      soapInfo: "Excellent in gentle and calming body-care themes",
+      fit: "Better in milder weather than in peak summer",
+      oil: "Use dried flower heads for infusion",
+      soap: "Excellent in gentle and calming body-care themes",
       caution: "Heat can shorten bloom time"
     },
     es: {
+      name: "Manzanilla",
+      tag: "Jabón • Aceites • Cuidado de baño",
+      desc: "Una flor suave con un aire tradicional delicado. Hermosa en jabones calmantes, baños y creaciones inspiradas en el cuidado de la piel.",
       sun: "Sol pleno a parcial",
       water: "Moderada",
       planting: "Jardín o maceta en temporada fresca",
-      backyardFit: "Mejor en clima suave que en pleno verano",
-      oilInfo: "Usa flores secas para la infusión",
-      soapInfo: "Excelente en temas suaves y calmantes de cuidado corporal",
+      fit: "Mejor en clima suave que en pleno verano",
+      oil: "Usa flores secas para la infusión",
+      soap: "Excelente en temas suaves y calmantes de cuidado corporal",
       caution: "El calor puede acortar el tiempo de floración"
     }
   },
 
-  rose: {
+  {
+    id: "cornflower",
     en: {
+      name: "Cornflower",
+      tag: "Soap • Petals • Decorative",
+      desc: "A delicate blue flower mostly used as a decorative botanical in soaps and gift-style creations.",
       sun: "Full sun",
       water: "Moderate",
-      planting: "Garden bed or large container",
-      backyardFit: "Can do well with good variety choice and regular care",
-      oilInfo: "Petals can be infused for gentle botanical value",
-      soapInfo: "Beautiful in floral soaps and petal decoration",
-      caution: "Use only clean, unsprayed petals in body-care projects"
+      planting: "Bed or container in mild season",
+      fit: "Better in gentler weather than extreme summer heat",
+      oil: "Usually used more for decoration than infused oil",
+      soap: "Best as a dried topper or decorative accent",
+      caution: "Mostly decorative, and petals may fade over time"
     },
-  }
     es: {
+      name: "Aciano",
+      tag: "Jabón • Pétalos • Decorativo",
+      desc: "Una flor azul delicada que se usa principalmente como botánico decorativo en jabones y creaciones para regalo.",
+      sun: "Sol pleno",
+      water: "Moderada",
+      planting: "Jardín o maceta en temporada suave",
+      fit: "Mejor en clima moderado que en calor extremo",
+      oil: "Generalmente se usa más para decoración que para aceite infusionado",
+      soap: "Mejor como adorno seco o acento decorativo",
+      caution: "Es mayormente decorativa y los pétalos pueden perder color con el tiempo"
+    }
+  },
+
+  {
+    id: "hibiscus",
+    en: {
+      name: "Hibiscus",
+      tag: "Soap • Bath Blends • Color",
+      desc: "A vibrant flower that thrives in South Texas heat and adds a bold botanical feel to bath and body projects.",
+      sun: "Full sun",
+      water: "Moderate",
+      planting: "Backyard shrub or large container",
+      fit: "Excellent for San Antonio heat",
+      oil: "Often used dried for color-forward herbal preparations more than strong scent",
+      soap: "Lovely in tropical, floral, and color-rich soap themes",
+      caution: "Different hibiscus varieties behave differently in body-care projects"
+    },
+    es: {
+      name: "Hibisco",
+      tag: "Jabón • Baños • Color",
+      desc: "Una flor vibrante que prospera en el calor del sur de Texas y añade un toque botánico intenso a proyectos de baño y cuerpo.",
+      sun: "Sol pleno",
+      water: "Moderada",
+      planting: "Arbusto en jardín o maceta grande",
+      fit: "Excelente para el calor de San Antonio",
+      oil: "A menudo se usa seca para preparaciones herbales con color más que por su aroma",
+      soap: "Hermosa en jabones tropicales, florales y llenos de color",
+      caution: "Las distintas variedades de hibisco se comportan diferente en productos corporales"
+    }
+  },
+
+  {
+    id: "lavender",
+    en: {
+      name: "Lavender",
+      tag: "Candles • Soap • Scrubs",
+      desc: "A calming herb with a sweet floral scent. Great for relaxing candles and moisturizing soaps.",
+      sun: "Full sun",
+      water: "Low",
+      planting: "Raised bed or container with excellent drainage",
+      fit: "Good for San Antonio if soil drains well",
+      oil: "Use fully dried buds only",
+      soap: "Great in soaps, scrubs, and botanical blends",
+      caution: "Fresh plant material can spoil oil infusions"
+    },
+    es: {
+      name: "Lavanda",
+      tag: "Velas • Jabón • Exfoliantes",
+      desc: "Una hierba calmante con aroma floral dulce. Perfecta para velas relajantes y jabones hidratantes.",
+      sun: "Sol pleno",
+      water: "Poca",
+      planting: "Cama elevada o maceta con buen drenaje",
+      fit: "Buena para San Antonio si el suelo drena bien",
+      oil: "Usa flores completamente secas",
+      soap: "Excelente en jabones, exfoliantes y mezclas botánicas",
+      caution: "El material fresco puede arruinar la infusión"
+    }
+  },
+
+  {
+    id: "lemon-balm",
+    en: {
+      name: "Lemon Balm",
+      tag: "Soap • Oils • Calming",
+      desc: "A gentle lemony herb often associated with soothing, calming body-care blends and soft garden scents.",
+      sun: "Morning sun, afternoon shade",
+      water: "Moderate",
+      planting: "Container or protected bed",
+      fit: "Good, but appreciates gentler conditions than peak summer heat",
+      oil: "Use dried leaves only",
+      soap: "Lovely in calming and soft citrus-herbal blends",
+      caution: "Can struggle in extreme afternoon heat"
+    },
+    es: {
+      name: "Toronjil",
+      tag: "Jabón • Aceites • Calmante",
+      desc: "Una hierba suave con toque de limón, asociada con mezclas calmantes para el cuerpo y aromas delicados de jardín.",
+      sun: "Sol por la mañana, sombra por la tarde",
+      water: "Moderada",
+      planting: "Maceta o jardín protegido",
+      fit: "Buena, pero prefiere condiciones más suaves que el calor extremo del verano",
+      oil: "Usa solo hojas secas",
+      soap: "Hermosa en mezclas calmantes y cítrico-herbales suaves",
+      caution: "Puede sufrir con el calor extremo de la tarde"
+    }
+  },
+
+  {
+    id: "lemongrass",
+    en: {
+      name: "Lemongrass",
+      tag: "Soap • Candles • Oils",
+      desc: "A bright, citrusy plant that loves heat and adds a fresh vibe to handmade products.",
+      sun: "Full sun",
+      water: "Moderate",
+      planting: "Bed or large container",
+      fit: "Excellent for hot South Texas weather",
+      oil: "Use dried chopped leaves for gentle infusions",
+      soap: "Great for fresh citrus-herbal soap themes",
+      caution: "For candle scent, use fragrance or essential oil for best throw"
+    },
+    es: {
+      name: "Hierba de limón",
+      tag: "Jabón • Velas • Aceites",
+      desc: "Una planta cítrica y fresca que ama el calor y aporta una vibra limpia a los productos artesanales.",
       sun: "Sol pleno",
       water: "Moderada",
       planting: "Jardín o maceta grande",
-      backyardFit: "Puede ir bien con buena variedad y cuidado regular",
-      oilInfo: "Los pétalos pueden infusionarse para un valor botánico suave",
-      soapInfo: "Hermosa en jabones florales y decoración con pétalos",
-      caution: "Usa solo pétalos limpios y sin químicos en productos corporales"
-    },
+      fit: "Excelente para el clima caluroso del sur de Texas",
+      oil: "Usa hojas secas picadas para infusiones suaves",
+      soap: "Excelente para jabones con perfil cítrico y herbal",
+      caution: "Para velas, usa fragancia o aceite esencial para mejor aroma"
+    }
+  },
+
   {
-  id: "cornflower",
-  en: {
-    name: "Cornflower",
-    tag: "Soap • Petals • Decorative",
-    desc: "A delicate blue flower mostly used as a decorative botanical in soaps and gift-style creations.",
-    sun: "Full sun",
-    water: "Moderate",
-    planting: "Bed or container in mild season",
-    fit: "Better in gentler weather than extreme summer heat",
-    oil: "Usually used more for decoration than infused oil",
-    soap: "Best as a dried topper or decorative accent",
-    caution: "Mostly decorative, and petals may fade over time"
+    id: "mint",
+    en: {
+      name: "Mint",
+      tag: "Soap • Scrubs • Bath Blends",
+      desc: "A refreshing herb that grows fast and works beautifully in cooling, clean-scented blends.",
+      sun: "Morning sun, afternoon shade",
+      water: "Moderate",
+      planting: "Container strongly recommended",
+      fit: "Grows well but spreads aggressively in beds",
+      oil: "Use dried leaves only",
+      soap: "Great for refreshing and cooling soap blends",
+      caution: "Keep in pots so it does not take over the garden"
+    },
+    es: {
+      name: "Menta",
+      tag: "Jabón • Exfoliantes • Baños",
+      desc: "Una hierba refrescante que crece rápido y funciona muy bien en mezclas limpias y frescas.",
+      sun: "Sol mañanero, sombra por la tarde",
+      water: "Moderada",
+      planting: "Se recomienda maceta",
+      fit: "Crece bien pero se extiende mucho en jardín abierto",
+      oil: "Usa solo hojas secas",
+      soap: "Excelente para mezclas de jabón refrescantes",
+      caution: "Mejor en maceta para que no invada el jardín"
+    }
   },
-}
-  es: {
-    name: "Aciano",
-    tag: "Jabón • Pétalos • Decorativo",
-    desc: "Una flor azul delicada que se usa principalmente como botánico decorativo en jabones y creaciones para regalo.",
-    sun: "Sol pleno",
-    water: "Moderada",
-    planting: "Jardín o maceta en temporada suave",
-    fit: "Mejor en clima moderado que en calor extremo",
-    oil: "Generalmente se usa más para decoración que para aceite infusionado",
-    soap: "Mejor como adorno seco o acento decorativo",
-    caution: "Es mayormente decorativa y los pétalos pueden perder color con el tiempo"
-},
-{
-  id: "hibiscus",
-  en: {
-    name: "Hibiscus",
-    tag: "Soap • Bath Blends • Color",
-    desc: "A vibrant flower that thrives in South Texas heat and adds a bold botanical feel to bath and body projects.",
-    sun: "Full sun",
-    water: "Moderate",
-    planting: "Backyard shrub or large container",
-    fit: "Excellent for San Antonio heat",
-    oil: "Often used dried for color-forward herbal preparations more than strong scent",
-    soap: "Lovely in tropical, floral, and color-rich soap themes",
-    caution: "Different hibiscus varieties behave differently in body-care projects"
+
+  {
+    id: "oregano",
+    en: {
+      name: "Oregano",
+      tag: "Soap • Oils • Strong Herbal",
+      desc: "A bold warm herb that grows well in sunny spaces. Nice for rustic herbal themes and garden-inspired blends.",
+      sun: "Full sun",
+      water: "Low to moderate",
+      planting: "Bed or container",
+      fit: "Hardy and easy in warm sunny spaces",
+      oil: "Use fully dried leaves only",
+      soap: "Good for rustic or strong herbal blends",
+      caution: "A little goes a long way in scent themes"
+    },
+    es: {
+      name: "Orégano",
+      tag: "Jabón • Aceites • Herbal intenso",
+      desc: "Una hierba intensa y cálida que crece bien en lugares soleados. Ideal para temas herbales rústicos y mezclas inspiradas en el jardín.",
+      sun: "Sol pleno",
+      water: "Baja a moderada",
+      planting: "Jardín o maceta",
+      fit: "Resistente y fácil en lugares cálidos y soleados",
+      oil: "Usa solo hojas completamente secas",
+      soap: "Bueno para mezclas rústicas o herbales intensas",
+      caution: "Un poco rinde mucho en perfiles aromáticos"
+    }
   },
-}
-  es: {
-    name: "Hibisco",
-    tag: "Jabón • Baños • Color",
-    desc: "Una flor vibrante que prospera en el calor del sur de Texas y añade un toque botánico intenso a proyectos de baño y cuerpo.",
-    sun: "Sol pleno",
-    water: "Moderada",
-    planting: "Arbusto en jardín o maceta grande",
-    fit: "Excelente para el calor de San Antonio",
-    oil: "A menudo se usa seca para preparaciones herbales con color más que por su aroma",
-    soap: "Hermosa en jabones tropicales, florales y llenos de color",
-    caution: "Las distintas variedades de hibisco se comportan diferente en productos corporales"
-},
-}
-{
-  id: "yarrow",
-  en: {
-    name: "Yarrow",
-    tag: "Soap • Oils • Traditional Herbal",
-    desc: "A hardy flowering herb with a long traditional history and a beautiful old-world herbal vibe.",
-    sun: "Full sun",
-    water: "Low to moderate",
-    planting: "Sunny bed with good drainage",
-    fit: "Good in hot sunny spaces once established",
-    oil: "Can be used in herbal infusions with dried flowers and leaves",
-    soap: "Works well in rustic or traditional herbal soap themes",
-    caution: "Best for careful herbal use and good plant identification"
+
+  {
+    id: "rose",
+    en: {
+      name: "Rose",
+      tag: "Candles • Soap • Petals",
+      desc: "A classic floral favorite that adds romance and softness to soaps, candles, and decorative botanical projects.",
+      sun: "Full sun",
+      water: "Moderate",
+      planting: "Garden bed or large container",
+      fit: "Can do well with good variety choice and regular care",
+      oil: "Petals can be infused for gentle botanical value",
+      soap: "Beautiful in floral soaps and petal decoration",
+      caution: "Use only clean, unsprayed petals in body-care projects"
+    },
+    es: {
+      name: "Rosa",
+      tag: "Velas • Jabón • Pétalos",
+      desc: "Una favorita floral clásica que añade romance y suavidad a jabones, velas y proyectos botánicos decorativos.",
+      sun: "Sol pleno",
+      water: "Moderada",
+      planting: "Jardín o maceta grande",
+      fit: "Puede ir bien con buena variedad y cuidado regular",
+      oil: "Los pétalos pueden infusionarse para un valor botánico suave",
+      soap: "Hermosa en jabones florales y decoración con pétalos",
+      caution: "Usa solo pétalos limpios y sin químicos en productos corporales"
+    }
   },
-}
-  es: {
-    name: "Milenrama",
-    tag: "Jabón • Aceites • Herbal tradicional",
-    desc: "Una hierba florida resistente con una larga historia tradicional y un hermoso estilo herbal antiguo.",
-    sun: "Sol pleno",
-    water: "Baja a moderada",
-    planting: "Jardín soleado con buen drenaje",
-    fit: "Buena en lugares cálidos y soleados una vez establecida",
-    oil: "Puede usarse en infusiones herbales con flores y hojas secas",
-    soap: "Funciona bien en temas de jabón herbal rústico o tradicional",
-    caution: "Mejor para un uso herbal cuidadoso y buena identificación de la planta"
+
+  {
+    id: "rosemary",
+    en: {
+      name: "Rosemary",
+      tag: "Candles • Soap • Oils",
+      desc: "A sturdy herbal favorite with a clean, woodsy scent. Wonderful for rustic soaps and garden-inspired candles.",
+      sun: "Full sun",
+      water: "Low to moderate",
+      planting: "Backyard bed or large container",
+      fit: "One of the most reliable herbs for San Antonio",
+      oil: "Infuse dried leaves in olive or sunflower oil",
+      soap: "Excellent for herbal and rustic soaps",
+      caution: "Do not overload loose herbs near open flame"
+    },
+    es: {
+      name: "Romero",
+      tag: "Velas • Jabón • Aceites",
+      desc: "Una favorita herbal resistente con aroma limpio y amaderado. Ideal para jabones rústicos y velas inspiradas en el jardín.",
+      sun: "Sol pleno",
+      water: "Baja a moderada",
+      planting: "Jardín o maceta grande",
+      fit: "Una de las hierbas más confiables para San Antonio",
+      oil: "Infusiona hojas secas en aceite de oliva o girasol",
+      soap: "Excelente para jabones herbales y rústicos",
+      caution: "No uses demasiadas hierbas sueltas cerca de la llama"
+    }
+  },
+
+  {
+    id: "sage",
+    en: {
+      name: "Sage",
+      tag: "Soap • Candles • Oils",
+      desc: "A soft earthy herb with a classic herbal scent. Beautiful in rustic soaps and cozy candle blends.",
+      sun: "Full sun",
+      water: "Low to moderate",
+      planting: "Bed or container with good drainage",
+      fit: "Strong choice for San Antonio heat",
+      oil: "Use dried leaves in infused oils",
+      soap: "Excellent for earthy herbal soaps",
+      caution: "Does not like soggy soil"
+    },
+    es: {
+      name: "Salvia",
+      tag: "Jabón • Velas • Aceites",
+      desc: "Una hierba suave y terrosa con un aroma herbal clásico. Hermosa en jabones rústicos y mezclas acogedoras para velas.",
+      sun: "Sol pleno",
+      water: "Baja a moderada",
+      planting: "Jardín o maceta con buen drenaje",
+      fit: "Muy buena opción para el calor de San Antonio",
+      oil: "Usa hojas secas en aceites infusionados",
+      soap: "Excelente para jabones herbales y terrosos",
+      caution: "No le gusta la tierra encharcada"
+    }
+  },
+
+  {
+    id: "thyme",
+    en: {
+      name: "Thyme",
+      tag: "Soap • Oils • Herbal Care",
+      desc: "A sturdy little herb that does well in heat and adds a clean herbal character to soaps and infused oils.",
+      sun: "Full sun",
+      water: "Low",
+      planting: "Raised bed, border, or container",
+      fit: "Very reliable once established",
+      oil: "Use dried herb only",
+      soap: "Great in clean herbal and rustic soap themes",
+      caution: "Needs drainage more than frequent watering"
+    },
+    es: {
+      name: "Tomillo",
+      tag: "Jabón • Aceites • Cuidado herbal",
+      desc: "Una hierba pequeña y resistente que soporta bien el calor y aporta un carácter herbal limpio a jabones y aceites infusionados.",
+      sun: "Sol pleno",
+      water: "Baja",
+      planting: "Cama elevada, borde o maceta",
+      fit: "Muy confiable una vez establecido",
+      oil: "Usa solo la hierba seca",
+      soap: "Excelente en temas de jabón herbal limpio y rústico",
+      caution: "Necesita más drenaje que riego frecuente"
+    }
+  },
+
+  {
+    id: "yarrow",
+    en: {
+      name: "Yarrow",
+      tag: "Soap • Oils • Traditional Herbal",
+      desc: "A hardy flowering herb with a long traditional history and a beautiful old-world herbal vibe.",
+      sun: "Full sun",
+      water: "Low to moderate",
+      planting: "Sunny bed with good drainage",
+      fit: "Good in hot sunny spaces once established",
+      oil: "Can be used in herbal infusions with dried flowers and leaves",
+      soap: "Works well in rustic or traditional herbal soap themes",
+      caution: "Best for careful herbal use and good plant identification"
+    },
+    es: {
+      name: "Milenrama",
+      tag: "Jabón • Aceites • Herbal tradicional",
+      desc: "Una hierba florida resistente con una larga historia tradicional y un hermoso estilo herbal antiguo.",
+      sun: "Sol pleno",
+      water: "Baja a moderada",
+      planting: "Jardín soleado con buen drenaje",
+      fit: "Buena en lugares cálidos y soleados una vez establecida",
+      oil: "Puede usarse en infusiones herbales con flores y hojas secas",
+      soap: "Funciona bien en temas de jabón herbal rústico o tradicional",
+      caution: "Mejor para un uso herbal cuidadoso y buena identificación de la planta"
+    }
   }
-}
-
 ];
-
 
     // ─── Render detail panel ─────────────────────────────────
     function renderPlantDetails(card) {
