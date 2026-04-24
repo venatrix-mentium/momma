@@ -689,26 +689,27 @@
 
     // ─── Render detail panel ─────────────────────────────────
     function renderPlantDetails(card) {
-      const key = card.dataset.plant;
-      const box = card.querySelector('.details');
-      const d = herbDetails[key]?.[currentLang];
-      if (!d || !box) return;
+  const key = card.dataset.plant;
+  const box = card.querySelector('.details');
+  const herb = herbs.find(h => h.id === key);
+  const d = herb?.[currentLang];
+  if (!d || !box) return;
 
-      const labels = {
-        en: { sun:"Sun", water:"Water", planting:"Planting", fit:"Backyard fit", oil:"Infused oil", soap:"Soap use", caution:"Caution" },
-        es: { sun:"Sol", water:"Agua", planting:"Siembra", fit:"Ideal para patio", oil:"Aceite infusionado", soap:"Uso en jabón", caution:"Precaución" }
-      }[currentLang];
+  const L = {
+    en: { sun:"Sun", water:"Water", planting:"Planting", fit:"Backyard fit", oil:"Infused oil", soap:"Soap use", caution:"Caution" },
+    es: { sun:"Sol", water:"Agua", planting:"Siembra", fit:"Ideal para patio", oil:"Aceite infusionado", soap:"Uso en jabón", caution:"Precaución" }
+  }[currentLang];
 
-      box.innerHTML = `
-        <p><strong>${labels.sun}:</strong> ${d.sun}</p>
-        <p><strong>${labels.water}:</strong> ${d.water}</p>
-        <p><strong>${labels.planting}:</strong> ${d.planting}</p>
-        <p><strong>${labels.fit}:</strong> ${d.backyardFit}</p>
-        <p><strong>${labels.oil}:</strong> ${d.oilInfo}</p>
-        <p><strong>${labels.soap}:</strong> ${d.soapInfo}</p>
-        <p><strong>${labels.caution}:</strong> ⚠️ ${d.caution}</p>
-      `;
-    }
+  box.innerHTML = `
+    <p><strong>${L.sun}:</strong> ${d.sun}</p>
+    <p><strong>${L.water}:</strong> ${d.water}</p>
+    <p><strong>${L.planting}:</strong> ${d.planting}</p>
+    <p><strong>${L.fit}:</strong> ${d.fit}</p>
+    <p><strong>${L.oil}:</strong> ${d.oil}</p>
+    <p><strong>${L.soap}:</strong> ${d.soap}</p>
+    <p><strong>${L.caution}:</strong> ⚠️ ${d.caution}</p>
+  `;
+}
     
     function renderHerbs() {
   const container = document.getElementById('herb-cards');
