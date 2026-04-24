@@ -7,312 +7,139 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    
     :root {
-  --bg:         #F7F4EA;
-  --surface:    #DED9E2;
-  --accent-1:   #C0B9DD;
-  --accent-2:   #80A1D4;
-  --accent-3:   #75C9C8;
-  --text:       #2D2A35;
-  --text-muted: #6B6575;
-  --radius:     1rem;
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'DM Sans', sans-serif;
-}
+      --bg:         #F7F4EA;
+      --surface:    #DED9E2;
+      --accent-1:   #C0B9DD;
+      --accent-2:   #80A1D4;
+      --accent-3:   #75C9C8;
+      --text:       #2D2A35;
+      --text-muted: #6B6575;
+      --radius:     1rem;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'DM Sans', sans-serif;
+    }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-body);
-  font-size: 1.05rem;
-  line-height: 1.6;
-  max-width: 680px;
-  margin: 0 auto;
-  padding-bottom: 5rem;
-}
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      line-height: 1.75;
+      max-width: 680px;
+      margin: 0 auto;
+      padding-bottom: 5rem;
+    }
 
-h1, h2, h3 {
-  font-family: var(--font-display);
-  line-height: 1.2;
-}
-    /* Large text for farsighted users */
-body {
-  font-size: 1.15rem; /* bumped from 1.05 */
-  line-height: 1.75;  /* more breathing room between lines */
-}
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      line-height: 1.2;
+    }
 
-h2 { font-size: 1.6rem; }
-h3 { font-size: 1.3rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.3rem; }
 
-p, li {
-  font-size: 1.1rem;
-  max-width: 60ch; /* keeps line length comfortable */
-}
+    p, li {
+      font-size: 1.1rem;
+      max-width: 60ch;
+    }
 
-/* Bigger tap targets — critical for 60+ users on phones */
-.tab-btn {
-  min-height: 56px;
-  min-width: 56px;
-  font-size: 0.85rem;
-  padding: 0.5rem 0.25rem;
-}
+    /* Bigger tap targets — critical for 60+ users on phones */
+    .tab-btn {
+      min-height: 56px;
+      min-width: 56px;
+      font-size: 0.85rem;
+      padding: 0.5rem 0.25rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
 
-/* Language toggle button — easy to tap */
-#langToggle {
-  font-size: 1rem;
-  padding: 0.6rem 1.2rem;
-  min-height: 48px;
-}
+    /* Language toggle button — easy to tap */
+    #langToggle {
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+      min-height: 48px;
+    }
 
-/* Cards — generous padding so content feels open */
-.card {
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  margin-bottom: 1.25rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
+    /* Cards — generous padding so content feels open */
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
 
-/* Tags under herb/recipe titles */
-.tag {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin: 0.25rem 0 0.75rem;
-  letter-spacing: 0.02em;
-}
+    /* Tags under herb/recipe titles */
+    .tag {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0.25rem 0 0.75rem;
+      letter-spacing: 0.02em;
+    }
 
-/* Step lists in recipes — numbered, spaced out */
-ol.steps li {
-  font-size: 1.1rem;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
+    /* Step lists in recipes — numbered, spaced out */
+    ol.steps li {
+      font-size: 1.1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
 
-/* Ingredient lists */
-ul.ingredients li {
-  font-size: 1.1rem;
-  padding: 0.3rem 0;
-}
+    /* Ingredient lists */
+    ul.ingredients li {
+      font-size: 1.1rem;
+      padding: 0.3rem 0;
+    }
 
-/* Section headers */
-.section-title {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  color: var(--accent-2);
-  margin: 1.5rem 0 1rem;
-}
+    /* Section headers */
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--accent-2);
+      margin: 1.5rem 0 1rem;
+    }
 
-.hidden { display: none; }
+    .hidden { display: none; }
 
-.details {
-  margin-top: 0.75rem;
-  padding: 1rem;
-  border-radius: 0.75rem;
-  background: rgba(255,255,255,0.5);
-  color: var(--text);
-  font-size: 1rem;
-  line-height: 1.7;
-}
+    .details {
+      margin-top: 0.75rem;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      background: rgba(255,255,255,0.5);
+      color: var(--text);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
 
-.details p { margin-bottom: 0.4rem; max-width: 100%; }
+    .details p { margin-bottom: 0.4rem; max-width: 100%; }
 
-.more-btn {
-  margin-top: 0.75rem;
-  background: var(--accent-2);
-  color: white;
-  border: none;
-  border-radius: 2rem;
-  padding: 0.4rem 1rem;
-  font-size: 0.95rem;
-  cursor: pointer;
-}
+    .more-btn {
+      margin-top: 0.75rem;
+      background: var(--accent-2);
+      color: white;
+      border: none;
+      border-radius: 2rem;
+      padding: 0.4rem 1rem;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
 
-.more-btn:hover { background: var(--accent-3); }
-
+    .more-btn:hover { background: var(--accent-3); }
   </style>
 </head>
 <body>
-  <header>
-    <header style="background: var(--accent-2); color: white; padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;">
-     <h1 style="font-size: 1.4rem;">🌿 Sandra's Craft Garden</h1>
-     <button id="langToggle" onclick="toggleLang()"
-     style="background: var(--accent-3); border: none; color: white; padding: 0.4rem 1rem; border-radius: 2rem; font-size: 0.9rem; cursor: pointer;">
-    🌐 Español
-     </button>
+  <!-- Top bar -->
+  <header style="background: var(--accent-2); color: white; padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;">
+    <h1 style="font-size: 1.4rem;">🌿 Sandra's Craft Garden</h1>
+    <button id="langToggle" onclick="toggleLang()"
+      style="background: var(--accent-3); border: none; color: white; padding: 0.4rem 1rem; border-radius: 2rem; font-size: 0.9rem; cursor: pointer;">
+      🌐 Español
+    </button>
   </header>
-  
-  <nav>
+
+  <!-- Bottom nav -->
   <nav style="position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface); display: flex; justify-content: space-around; padding: 0.6rem 0; border-top: 1px solid var(--accent-1); z-index: 100; max-width: 680px; margin: 0 auto;">
-  <button onclick="showTab('herbs')"   class="tab-btn">🌿<br><span class="tab-label" data-en="Herbs"   data-es="Hierbas">Herbs</span></button>
-  <button onclick="showTab('recipes')" class="tab-btn">🕯️<br><span class="tab-label" data-en="Recipes" data-es="Recetas">Recipes</span></button>
-  <button onclick="showTab('oils')"    class="tab-btn">🫙<br><span class="tab-label" data-en="Oils"    data-es="Aceites">Oils</span></button>
-  <button onclick="showTab('grow')"    class="tab-btn">🌱<br><span class="tab-label" data-en="Grow"    data-es="Cultivo">Grow</span></button>
-  <button onclick="showTab('translate')" class="tab-btn">📖<br><span class="tab-label" data-en="Glossary" data-es="Glosario">Glossary</span></button>
-</nav>
-  </nav>
-  <main>
-    <section id="herbs">
-  <h2 class="section-title" data-en="Herbs & Flowers" data-es="Hierbas y Flores">Herbs & Flowers</h2>
-
-  <div class="card" data-plant="lavender">
-    <h3><span data-en="Lavender" data-es="Lavanda">Lavender</span></h3>
-    <p class="tag" data-en="Candles • Soap • Scrubs" data-es="Velas • Jabón • Exfoliantes">Candles • Soap • Scrubs</p>
-    <p data-en="A calming herb with a sweet floral scent. Great for relaxing candles and moisturizing soaps."
-       data-es="Una hierba calmante con aroma floral dulce. Perfecta para velas relajantes y jabones hidratantes.">
-      A calming herb with a sweet floral scent. Great for relaxing candles and moisturizing soaps.
-    </p>
-    <button class="more-btn" data-en="More info" data-es="Más información">More info</button>
-    <div class="details hidden"></div>
-  </div>
-
-  <div class="card" data-plant="rosemary">
-    <h3><span data-en="Rosemary" data-es="Romero">Rosemary</span></h3>
-    <p class="tag" data-en="Candles • Soap • Oils" data-es="Velas • Jabón • Aceites">Candles • Soap • Oils</p>
-    <p data-en="A sturdy herbal favorite with a clean, woodsy scent. Wonderful for rustic soaps and garden-inspired candles."
-       data-es="Una favorita herbal resistente con aroma limpio y amaderado. Ideal para jabones rústicos y velas inspiradas en el jardín.">
-      A sturdy herbal favorite with a clean, woodsy scent. Wonderful for rustic soaps and garden-inspired candles.
-    </p>
-    <button class="more-btn" data-en="More info" data-es="Más información">More info</button>
-    <div class="details hidden"></div>
-  </div>
-
-  <div class="card" data-plant="calendula">
-    <h3><span data-en="Calendula" data-es="Caléndula">Calendula</span></h3>
-    <p class="tag" data-en="Soap • Oils • Salves" data-es="Jabón • Aceites • Ungüentos">Soap • Oils • Salves</p>
-    <p data-en="Bright petals that are beautiful in soap and especially loved for infused oils."
-       data-es="Pétalos brillantes que lucen hermosos en jabón y son muy apreciados para aceites infusionados.">
-      Bright petals that are beautiful in soap and especially loved for infused oils.
-    </p>
-    <button class="more-btn" data-en="More info" data-es="Más información">More info</button>
-    <div class="details hidden"></div>
-  </div>
-
-  <div class="card" data-plant="lemongrass">
-    <h3><span data-en="Lemongrass" data-es="Hierba de limón">Lemongrass</span></h3>
-    <p class="tag" data-en="Soap • Candles • Oils" data-es="Jabón • Velas • Aceites">Soap • Candles • Oils</p>
-    <p data-en="A bright, citrusy plant that loves heat and adds a fresh vibe to handmade products."
-       data-es="Una planta cítrica y fresca que ama el calor y aporta una vibra limpia a los productos artesanales.">
-      A bright, citrusy plant that loves heat and adds a fresh vibe to handmade products.
-    </p>
-    <button class="more-btn" data-en="More info" data-es="Más información">More info</button>
-    <div class="details hidden"></div>
-  </div>
-
-  <div class="card" data-plant="mint">
-    <h3><span data-en="Mint" data-es="Menta">Mint</span></h3>
-    <p class="tag" data-en="Soap • Scrubs • Bath Blends" data-es="Jabón • Exfoliantes • Baños">Soap • Scrubs • Bath Blends</p>
-    <p data-en="A refreshing herb that grows fast and works beautifully in cooling, clean-scented blends."
-       data-es="Una hierba refrescante que crece rápido y funciona muy bien en mezclas limpias y frescas.">
-      A refreshing herb that grows fast and works beautifully in cooling, clean-scented blends.
-    </p>
-    <button class="more-btn" data-en="More info" data-es="Más información">More info</button>
-    <div class="details hidden"></div>
-  </div>
-
-</section>
-
-    <section id="recipes">...</section>
-    <section id="oils">...</section>
-    <section id="grow">...</section>
-    <section id="translate">...</section>
-  </main>
-
-  <script>
-    function showTab(id) {
-  document.querySelectorAll('main section').forEach(s => s.style.display = 'none');
-  document.getElementById(id).style.display = 'block';
-  document.querySelectorAll('.tab-btn').forEach(b => b.style.fontWeight = 'normal');
-  event.currentTarget.style.fontWeight = 'bold';
-}
-
-// Show herbs tab by default
-document.addEventListener('DOMContentLoaded', () => {
-  showTab('herbs');
-});
-
-    let currentLang = 'en';
-
-function toggleLang() {
-  currentLang = currentLang === 'en' ? 'es' : 'en';
-  document.documentElement.setAttribute('data-lang', currentLang);
-  document.getElementById('langToggle').textContent =
-    currentLang === 'en' ? '🌐 Español' : '🌐 English';
-
-  // Swap all labeled elements
-  document.querySelectorAll('[data-en]').forEach(el => {
-    el.textContent = el.getAttribute('data-' + currentLang);
-  });
-}
-
-// ─── Herb detail data ───────────────────────────────────────
-const herbDetails = {
-  lavender: {
-    en: { sun:"Full sun", water:"Low", planting:"Raised bed or container with excellent drainage", backyardFit:"Good for San Antonio if soil drains well", oilInfo:"Use fully dried buds only", soapInfo:"Great in soaps, scrubs, and botanical blends", caution:"Fresh plant material can spoil oil infusions" },
-    es: { sun:"Sol pleno", water:"Poca", planting:"Cama elevada o maceta con buen drenaje", backyardFit:"Buena para San Antonio si el suelo drena bien", oilInfo:"Usa flores completamente secas", soapInfo:"Excelente en jabones, exfoliantes y mezclas botánicas", caution:"El material fresco puede arruinar la infusión" }
-  },
-  rosemary: {
-    en: { sun:"Full sun", water:"Low to moderate", planting:"Backyard bed or large container", backyardFit:"One of the most reliable herbs for San Antonio", oilInfo:"Infuse dried leaves in olive or sunflower oil", soapInfo:"Excellent for herbal and rustic soaps", caution:"Do not overload loose herbs near open flame" },
-    es: { sun:"Sol pleno", water:"Baja a moderada", planting:"Jardín o maceta grande", backyardFit:"Una de las hierbas más confiables para San Antonio", oilInfo:"Infusiona hojas secas en aceite de oliva o girasol", soapInfo:"Excelente para jabones herbales y rústicos", caution:"No uses demasiadas hierbas sueltas cerca de la llama" }
-  },
-  calendula: {
-    en: { sun:"Full sun to part sun", water:"Moderate", planting:"Best in the cooler season", backyardFit:"Great for soap making, not ideal in peak summer heat", oilInfo:"Use dried petals — one of the best for beginners", soapInfo:"Excellent for soothing soaps and petal decoration", caution:"Dry petals fully before adding to oil" },
-    es: { sun:"Sol pleno a parcial", water:"Moderada", planting:"Mejor en temporada fresca", backyardFit:"Ideal para jabón, no le encanta el calor extremo", oilInfo:"Usa pétalos secos — una de las mejores para principiantes", soapInfo:"Excelente para jabones suaves y decoración", caution:"Seca bien los pétalos antes de ponerlos en aceite" }
-  },
-  lemongrass: {
-    en: { sun:"Full sun", water:"Moderate", planting:"Bed or large container", backyardFit:"Excellent for hot South Texas weather", oilInfo:"Use dried chopped leaves for gentle infusions", soapInfo:"Great for fresh citrus-herbal soap themes", caution:"For candle scent, use fragrance or essential oil for best throw" },
-    es: { sun:"Sol pleno", water:"Moderada", planting:"Jardín o maceta grande", backyardFit:"Excelente para el clima caluroso del sur de Texas", oilInfo:"Usa hojas secas picadas para infusiones suaves", soapInfo:"Excelente para jabones con perfil cítrico y herbal", caution:"Para velas, usa fragancia o aceite esencial para mejor aroma" }
-  },
-  mint: {
-    en: { sun:"Morning sun, afternoon shade", water:"Moderate", planting:"Container strongly recommended", backyardFit:"Grows well but spreads aggressively in beds", oilInfo:"Use dried leaves only", soapInfo:"Great for refreshing and cooling soap blends", caution:"Keep in pots so it does not take over the garden" },
-    es: { sun:"Sol mañanero, sombra por la tarde", water:"Moderada", planting:"Se recomienda maceta", backyardFit:"Crece bien pero se extiende mucho en jardín abierto", oilInfo:"Usa solo hojas secas", soapInfo:"Excelente para mezclas de jabón refrescantes", caution:"Mejor en maceta para que no invada el jardín" }
-  }
-};
-
-// ─── Render detail panel ─────────────────────────────────────
-function renderPlantDetails(card) {
-  const key = card.dataset.plant;
-  const box = card.querySelector('.details');
-  const d = herbDetails[key]?.[currentLang];
-  if (!d || !box) return;
-
-  const labels = {
-    en: { sun:"Sun", water:"Water", planting:"Planting", fit:"Backyard fit", oil:"Infused oil", soap:"Soap use", caution:"Caution" },
-    es: { sun:"Sol", water:"Agua", planting:"Siembra", fit:"Ideal para patio", oil:"Aceite infusionado", soap:"Uso en jabón", caution:"Precaución" }
-  }[currentLang];
-
-  box.innerHTML = `
-    <p><strong>${labels.sun}:</strong> ${d.sun}</p>
-    <p><strong>${labels.water}:</strong> ${d.water}</p>
-    <p><strong>${labels.planting}:</strong> ${d.planting}</p>
-    <p><strong>${labels.fit}:</strong> ${d.backyardFit}</p>
-    <p><strong>${labels.oil}:</strong> ${d.oilInfo}</p>
-    <p><strong>${labels.soap}:</strong> ${d.soapInfo}</p>
-    <p><strong>${labels.caution}:</strong> ⚠️ ${d.caution}</p>
-  `;
-}
-
-// ─── More info button clicks ─────────────────────────────────
-document.addEventListener('click', e => {
-  const btn = e.target.closest('.more-btn');
-  if (!btn) return;
-  const card = btn.closest('.card');
-  const details = card.querySelector('.details');
-  const isOpen = !details.classList.contains('hidden');
-
-  details.classList.toggle('hidden');
-  if (!isOpen) renderPlantDetails(card);
-
-  btn.setAttribute('data-en', isOpen ? 'More info' : 'Less info');
-  btn.setAttribute('data-es', isOpen ? 'Más información' : 'Menos información');
-  btn.textContent = isOpen
-    ? (currentLang === 'en' ? 'More info' : 'Más información')
-    : (currentLang === 'en' ? 'Less info' : 'Menos información');
-});
-
-
-  </script>
-</body>
-</html>
+    <button onclick="
