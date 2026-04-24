@@ -145,11 +145,15 @@
     <button onclick="showTab(event, 'herbs')"   class="tab-btn">🌿<br><span class="tab-label" data-en="Herbs"   data-es="Hierbas">Herbs</span></button>
     <button onclick="showTab(event, 'recipes')" class="tab-btn">🕯️<br><span class="tab-label" data-en="Recipes" data-es="Recetas">Recipes</span></button>
     <button onclick="showTab(event, 'oils')"    class="tab-btn">🫙<br><span class="tab-label" data-en="Oils"    data-es="Aceites">Oils</span></button>
+    <button onclick="showTab(event, 'medicinal')" class="tab-btn">🌼<br><span class="tab-label" data-en="Medicinal" data-es="Medicinal">Medicinal</span></button>
     <button onclick="showTab(event, 'grow')"    class="tab-btn">🌱<br><span class="tab-label" data-en="Grow"    data-es="Cultivo">Grow</span></button>
     <button onclick="showTab(event, 'translate')" class="tab-btn">📖<br><span class="tab-label" data-en="Glossary" data-es="Glosario">Glossary</span></button>
   </nav>
 
   <main>
+
+<!--herbs section-->
+
     <section id="herbs">
       <h2 class="section-title" data-en="Herbs & Flowers" data-es="Hierbas y Flores">Herbs & Flowers</h2>
 
@@ -208,11 +212,182 @@
         <div class="details hidden"></div>
       </div>
     </section>
+    
+<!-- recipes section-->
 
     <section id="recipes">...</section>
-    <section id="oils">...</section>
+    
+<!-- oils section -->
+
+    <section id="oils" style="display:none;">
+  <h2 class="section-title" data-en="Infused Oils" data-es="Aceites Infusionados">Infused Oils</h2>
+
+  <div class="card">
+    <h3>
+      <span data-en="What is an infused oil?" data-es="¿Qué es un aceite infusionado?">
+        What is an infused oil?
+      </span>
+    </h3>
+    <p class="tag"
+       data-en="Calendula • Lavender • Rosemary"
+       data-es="Caléndula • Lavanda • Romero">
+      Calendula • Lavender • Rosemary
+    </p>
+    <p
+      data-en="An infused oil is a carrier oil that slowly pulls helpful plant properties from dried herbs or flowers. These oils can be used in soaps, salves, and body care."
+      data-es="Un aceite infusionado es un aceite base que extrae lentamente propiedades útiles de hierbas o flores secas. Estos aceites pueden usarse en jabones, ungüentos y cuidado corporal.">
+      An infused oil is a carrier oil that slowly pulls helpful plant properties from dried herbs or flowers. These oils can be used in soaps, salves, and body care.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>
+      <span data-en="Basic cold infusion" data-es="Infusión básica en frío">
+        Basic cold infusion
+      </span>
+    </h3>
+    <p class="tag"
+       data-en="Slow method • Best for storage"
+       data-es="Método lento • Mejor para guardar">
+      Slow method • Best for storage
+    </p>
+    <ol class="steps">
+      <li data-en="Use fully dried herbs or petals only." data-es="Usa solo hierbas o pétalos completamente secos.">Use fully dried herbs or petals only.</li>
+      <li data-en="Fill a clean dry jar about halfway with herbs." data-es="Llena un frasco limpio y seco hasta la mitad con hierbas.">Fill a clean dry jar about halfway with herbs.</li>
+      <li data-en="Pour in olive, sunflower, or sweet almond oil until the herbs are fully covered." data-es="Agrega aceite de oliva, girasol o almendra dulce hasta cubrir completamente las hierbas.">Pour in olive, sunflower, or sweet almond oil until the herbs are fully covered.</li>
+      <li data-en="Seal the jar and keep it in a warm dark place for 4 to 6 weeks." data-es="Cierra el frasco y guárdalo en un lugar cálido y oscuro durante 4 a 6 semanas.">Seal the jar and keep it in a warm dark place for 4 to 6 weeks.</li>
+      <li data-en="Shake gently every day or two." data-es="Agítalo suavemente cada uno o dos días.">Shake gently every day or two.</li>
+      <li data-en="Strain well and store in a clean bottle." data-es="Cuela bien y guarda el aceite en una botella limpia.">Strain well and store in a clean bottle.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3>
+      <span data-en="Quick warm infusion" data-es="Infusión rápida con calor">
+        Quick warm infusion
+      </span>
+    </h3>
+    <p class="tag"
+       data-en="Faster method • Gentle heat"
+       data-es="Método rápido • Calor suave">
+      Faster method • Gentle heat
+    </p>
+    <ol class="steps">
+      <li data-en="Add dried herbs and oil to a heat-safe jar or double boiler." data-es="Agrega hierbas secas y aceite a un frasco resistente al calor o baño maría.">Add dried herbs and oil to a heat-safe jar or double boiler.</li>
+      <li data-en="Warm very gently for 2 to 4 hours." data-es="Calienta suavemente durante 2 a 4 horas.">Warm very gently for 2 to 4 hours.</li>
+      <li data-en="Do not boil or fry the herbs." data-es="No hiervas ni frías las hierbas.">Do not boil or fry the herbs.</li>
+      <li data-en="Cool, strain, and bottle." data-es="Deja enfriar, cuela y embotella.">Cool, strain, and bottle.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3>
+      <span data-en="Important safety note" data-es="Nota importante de seguridad">
+        Important safety note
+      </span>
+    </h3>
+    <p
+      data-en="Fresh herbs can introduce water into oil and may cause mold or spoilage if stored. Dried herbs are the safer choice for oils you plan to keep."
+      data-es="Las hierbas frescas pueden introducir agua en el aceite y causar moho o descomposición si se guardan. Las hierbas secas son la opción más segura para aceites que se van a conservar.">
+      Fresh herbs can introduce water into oil and may cause mold or spoilage if stored. Dried herbs are the safer choice for oils you plan to keep.
+    </p>
+  </div>
+</section>
+
+<!-- medicinal -->
+
+<section id="medicinal" style="display:none;">
+  <h2 class="section-title" data-en="Medicinal Applications" data-es="Aplicaciones Medicinales">Medicinal Applications</h2>
+
+  <div class="card">
+    <h3>
+      <span data-en="Important reminder" data-es="Recordatorio importante">
+        Important reminder
+      </span>
+    </h3>
+    <p
+      data-en="This section is for traditional and educational herbal uses only. It is not medical advice, and herbs can interact with medications or irritate sensitive skin."
+      data-es="Esta sección es solo para usos herbales tradicionales y educativos. No es consejo médico, y las hierbas pueden interactuar con medicamentos o irritar la piel sensible.">
+      This section is for traditional and educational herbal uses only. It is not medical advice, and herbs can interact with medications or irritate sensitive skin.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3><span data-en="Calendula" data-es="Caléndula">Calendula</span></h3>
+    <p class="tag"
+       data-en="Skin soothing • Salves • Oils"
+       data-es="Calmante para la piel • Ungüentos • Aceites">
+      Skin soothing • Salves • Oils
+    </p>
+    <p
+      data-en="Calendula is commonly used in herbal body care for soothing dry or irritated skin, and infused calendula oil is often used in salves and gentle skincare."
+      data-es="La caléndula se usa comúnmente en el cuidado herbal del cuerpo para aliviar la piel seca o irritada, y el aceite de caléndula infusionado se utiliza con frecuencia en ungüentos y productos suaves para la piel.">
+      Calendula is commonly used in herbal body care for soothing dry or irritated skin, and infused calendula oil is often used in salves and gentle skincare.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3><span data-en="Lavender" data-es="Lavanda">Lavender</span></h3>
+    <p class="tag"
+       data-en="Calming • Aromatic • Bath care"
+       data-es="Relajante • Aromática • Cuidado de baño">
+      Calming • Aromatic • Bath care
+    </p>
+    <p
+      data-en="Lavender is traditionally used for relaxation and aromatic comfort. In body care, it is often included in bath products, sachets, and diluted topical preparations."
+      data-es="La lavanda se usa tradicionalmente para la relajación y el bienestar aromático. En el cuidado corporal, suele incluirse en productos de baño, saquitos aromáticos y preparaciones tópicas diluidas.">
+      Lavender is traditionally used for relaxation and aromatic comfort. In body care, it is often included in bath products, sachets, and diluted topical preparations.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3><span data-en="Mint" data-es="Menta">Mint</span></h3>
+    <p class="tag"
+       data-en="Cooling • Fresh scent • Foot care"
+       data-es="Refrescante • Aroma fresco • Cuidado de pies">
+      Cooling • Fresh scent • Foot care
+    </p>
+    <p
+      data-en="Mint is often used in refreshing body products like foot scrubs, bath salts, and cooling soap blends. It is best used thoughtfully because strong mint oils can irritate skin."
+      data-es="La menta se usa con frecuencia en productos corporales refrescantes como exfoliantes para pies, sales de baño y mezclas de jabón refrescantes. Es mejor usarla con cuidado porque los aceites fuertes de menta pueden irritar la piel.">
+      Mint is often used in refreshing body products like foot scrubs, bath salts, and cooling soap blends. It is best used thoughtfully because strong mint oils can irritate skin.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3><span data-en="Lemon balm" data-es="Toronjil">Lemon balm</span></h3>
+    <p class="tag"
+       data-en="Gentle • Calming • Herbal care"
+       data-es="Suave • Calmante • Cuidado herbal">
+      Gentle • Calming • Herbal care
+    </p>
+    <p
+      data-en="Lemon balm is a traditional calming herb often associated with gentle wellness and soothing herbal preparations."
+      data-es="El toronjil es una hierba tradicionalmente calmante, asociada con el bienestar suave y las preparaciones herbales reconfortantes.">
+      Lemon balm is a traditional calming herb often associated with gentle wellness and soothing herbal preparations.
+    </p>
+  </div>
+</section>
+
+
+<!-- grow section -->
+
     <section id="grow">...</section>
-    <section id="translate">...</section>
+    
+<!-- translate -->
+
+    <div class="card">
+  <h3><span data-en="Oil words" data-es="Palabras de aceites">Oil words</span></h3>
+  <ul class="ingredients">
+    <li><span data-en="Infused oil = Aceite infusionado" data-es="Infused oil = Aceite infusionado">Infused oil = Aceite infusionado</span></li>
+    <li><span data-en="Carrier oil = Aceite base" data-es="Carrier oil = Aceite base">Carrier oil = Aceite base</span></li>
+    <li><span data-en="Dried herbs = Hierbas secas" data-es="Dried herbs = Hierbas secas">Dried herbs = Hierbas secas</span></li>
+    <li><span data-en="Strain = Colar" data-es="Strain = Colar">Strain = Colar</span></li>
+    <li><span data-en="Salve = Ungüento" data-es="Salve = Ungüento">Salve = Ungüento</span></li>
+    <li><span data-en="Topical = De uso externo" data-es="Topical = De uso externo">Topical = De uso externo</span></li>
+  </ul>
+</div>
+
   </main>
 
   <script>
