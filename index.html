@@ -1942,14 +1942,17 @@
 
   <script>
     function showTab(event, id) {
-      document.querySelectorAll('main section').forEach(s => s.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
-      document.querySelectorAll('.tab-btn').forEach(b => b.style.fontWeight = 'normal');
-      if (event && event.currentTarget) {
-        event.currentTarget.style.fontWeight = 'bold';
-      }
-    }
-    
+  document.querySelectorAll('main section').forEach(s => s.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+  if (id === 'garden') {
+    document.getElementById('grow').style.display = 'block';
+  }
+  document.querySelectorAll('.tab-btn').forEach(b => b.style.fontWeight = 'normal');
+  if (event && event.currentTarget) {
+    event.currentTarget.style.fontWeight = 'bold';
+  }
+}
+
     function filterGlossary() {
   const input = document.getElementById('glossarySearch');
   const query = input ? input.value.toLowerCase().trim() : '';
